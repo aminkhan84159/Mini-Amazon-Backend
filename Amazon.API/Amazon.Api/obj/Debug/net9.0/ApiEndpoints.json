@@ -1,0 +1,890 @@
+[
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Cart.GetCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.AddCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.UpdateCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.DeleteCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/Cart",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Cart.GetCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.AddCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.UpdateCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.DeleteCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "CreateAsync",
+    "RelativePath": "api/Cart/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.Cart.AddCartRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Cart.GetCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.AddCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.UpdateCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.DeleteCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/Cart/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CartId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Cart.GetCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.AddCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.UpdateCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.DeleteCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/Cart/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Amazon.Api.Entities.Messages.Cart.GetCartRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Cart.GetCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.AddCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.UpdateCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Cart.DeleteCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/Cart/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.Cart.UpdateCartRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Image.GetImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.AddImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.UpdateImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.DeleteImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/Image",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Image.GetImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.AddImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.UpdateImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.DeleteImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "CreateAsync",
+    "RelativePath": "api/Image/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.Image.AddImageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.ImageController",
+    "Method": "CreateAsync",
+    "RelativePath": "api/Image/AddImage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ImageTypeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Images",
+        "Type": "Microsoft.AspNetCore.Http.IFormFileCollection",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Image.GetImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.AddImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.UpdateImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.DeleteImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/Image/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ImageId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Image.GetImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.AddImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.UpdateImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.DeleteImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/Image/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Amazon.Api.Entities.Messages.Image.GetImageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.ImageController",
+    "Method": "GetImagesByProductId",
+    "RelativePath": "api/Image/GetImagesByProductId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getImagesByProductIdRequest",
+        "Type": "Amazon.Api.Entities.Messages.Image.GetImagesByProductIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Image.GetImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.AddImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.UpdateImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Image.DeleteImageRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/Image/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.Image.UpdateImageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.ImageType.GetImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.AddImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.UpdateImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.DeleteImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/ImageType",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.ImageType.GetImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.AddImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.UpdateImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.DeleteImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "CreateAsync",
+    "RelativePath": "api/ImageType/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.ImageType.AddImageTypeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.ImageType.GetImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.AddImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.UpdateImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.DeleteImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/ImageType/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ImageTypeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.ImageType.GetImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.AddImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.UpdateImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.DeleteImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/ImageType/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Amazon.Api.Entities.Messages.ImageType.GetImageTypeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.ImageType.GetImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.AddImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.UpdateImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ImageType.DeleteImageTypeRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/ImageType/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.ImageType.UpdateImageTypeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Order.GetOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.AddOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.UpdateOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.DeleteOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/Order",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Order.GetOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.AddOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.UpdateOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.DeleteOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "CreateAsync",
+    "RelativePath": "api/Order/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.Order.AddOrderRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Order.GetOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.AddOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.UpdateOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.DeleteOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/Order/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "OrderId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Order.GetOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.AddOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.UpdateOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.DeleteOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/Order/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Amazon.Api.Entities.Messages.Order.GetOrderRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Order.GetOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.AddOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.UpdateOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Order.DeleteOrderRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/Order/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.Order.UpdateOrderRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Product.GetProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.AddProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.UpdateProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.DeleteProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/Product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Product.GetProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.AddProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.UpdateProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.DeleteProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "CreateAsync",
+    "RelativePath": "api/Product/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.Product.AddProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Product.GetProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.AddProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.UpdateProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.DeleteProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/Product/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.ProductController",
+    "Method": "GetFilteredProducts",
+    "RelativePath": "api/Product/FilteredProducts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getFilteredProductsRequest",
+        "Type": "Amazon.Api.Entities.Messages.Product.GetFilteredProductsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Product.GetProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.AddProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.UpdateProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.DeleteProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/Product/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Amazon.Api.Entities.Messages.Product.GetProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.ProductController",
+    "Method": "GetProductsByCartId",
+    "RelativePath": "api/Product/GetProductsByCartId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getProductsByCartIdRequest",
+        "Type": "Amazon.Api.Entities.Messages.Product.GetProductsByCartIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.ProductController",
+    "Method": "GetProductsByCategories",
+    "RelativePath": "api/Product/GetProductsByCategories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getProductsByCategoriesRequest",
+        "Type": "Amazon.Api.Entities.Messages.Product.GetProductsByCategoriesRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Product.GetProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.AddProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.UpdateProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Product.DeleteProductRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/Product/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.Product.UpdateProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.ProductDetail.GetProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.AddProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.UpdateProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.DeleteProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/ProductDetail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.ProductDetail.GetProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.AddProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.UpdateProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.DeleteProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "CreateAsync",
+    "RelativePath": "api/ProductDetail/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.ProductDetail.AddProductDetailRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.ProductDetail.GetProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.AddProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.UpdateProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.DeleteProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/ProductDetail/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductDetailId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.ProductDetail.GetProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.AddProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.UpdateProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.DeleteProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/ProductDetail/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Amazon.Api.Entities.Messages.ProductDetail.GetProductDetailRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.ProductDetailController",
+    "Method": "GetProductDetailsByProductIdAsync",
+    "RelativePath": "api/ProductDetail/GetProductDetailsByProductId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getProductDetailsByProductIdRequest",
+        "Type": "Amazon.Api.Entities.Messages.ProductDetail.GetProductDetailsByProductIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.ProductDetail.GetProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.AddProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.UpdateProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.ProductDetail.DeleteProductDetailRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/ProductDetail/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.ProductDetail.UpdateProductDetailRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Review.GetReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.AddReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.UpdateReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.DeleteReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/Review",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Review.GetReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.AddReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.UpdateReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.DeleteReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "CreateAsync",
+    "RelativePath": "api/Review/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.Review.AddReviewRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Review.GetReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.AddReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.UpdateReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.DeleteReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/Review/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ReviewId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Review.GetReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.AddReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.UpdateReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.DeleteReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/Review/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Amazon.Api.Entities.Messages.Review.GetReviewRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Review.GetReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.AddReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.UpdateReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Review.DeleteReviewRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/Review/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.Review.UpdateReviewRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Tag.GetTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.AddTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.UpdateTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.DeleteTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/Tag",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Tag.GetTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.AddTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.UpdateTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.DeleteTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "CreateAsync",
+    "RelativePath": "api/Tag/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.Tag.AddTagRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Tag.GetTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.AddTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.UpdateTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.DeleteTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/Tag/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TagId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Tag.GetTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.AddTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.UpdateTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.DeleteTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/Tag/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Amazon.Api.Entities.Messages.Tag.GetTagRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.Tag.GetTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.AddTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.UpdateTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.Tag.DeleteTagRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/Tag/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.Tag.UpdateTagRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.User.GetUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.AddUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.UpdateUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.DeleteUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.User.GetUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.AddUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.UpdateUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.DeleteUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "CreateAsync",
+    "RelativePath": "api/User/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.User.AddUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.User.GetUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.AddUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.UpdateUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.DeleteUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/User/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.User.GetUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.AddUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.UpdateUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.DeleteUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/User/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Amazon.Api.Entities.Messages.User.GetUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.UserController",
+    "Method": "LoginUser",
+    "RelativePath": "api/User/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginUserRequest",
+        "Type": "Amazon.Api.Entities.Messages.User.LoginUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.User.GetUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.AddUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.UpdateUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.User.DeleteUserRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/User/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.User.UpdateUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.UserCart.GetUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.AddUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.UpdateUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.DeleteUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/UserCart",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.UserCart.GetUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.AddUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.UpdateUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.DeleteUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "CreateAsync",
+    "RelativePath": "api/UserCart/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.UserCart.AddUserCartRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.UserCart.GetUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.AddUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.UpdateUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.DeleteUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/UserCart/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CartId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.UserCart.GetUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.AddUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.UpdateUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.DeleteUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/UserCart/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Amazon.Api.Entities.Messages.UserCart.GetUserCartRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.GenericController\u00604[[Amazon.Api.Entities.Messages.UserCart.GetUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.AddUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.UpdateUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Amazon.Api.Entities.Messages.UserCart.DeleteUserCartRequest, Amazon.Api.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/UserCart/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Amazon.Api.Entities.Messages.UserCart.UpdateUserCartRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Amazon.Api.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Amazon.Api.WeatherForecast, Amazon.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

@@ -1,0 +1,623 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api\\Amazon.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Business\\Amazon.Api.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Business\\Amazon.Api.Business.csproj",
+        "projectName": "Amazon.Api.Business",
+        "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Business\\Amazon.Api.Business.csproj",
+        "packagesPath": "C:\\Users\\AminKhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AminKhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj": {
+                "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj",
+        "projectName": "Amazon.Api.Core",
+        "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj",
+        "packagesPath": "C:\\Users\\AminKhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AminKhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Data\\Amazon.Api.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Data\\Amazon.Api.Data.csproj",
+        "projectName": "Amazon.Api.Data",
+        "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Data\\Amazon.Api.Data.csproj",
+        "packagesPath": "C:\\Users\\AminKhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AminKhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj": {
+                "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Entities\\Amazon.Api.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Entities\\Amazon.Api.Entities.csproj",
+        "projectName": "Amazon.Api.Entities",
+        "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Entities\\Amazon.Api.Entities.csproj",
+        "packagesPath": "C:\\Users\\AminKhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AminKhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj": {
+                "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj",
+        "projectName": "Amazon.Api.Handlers",
+        "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj",
+        "packagesPath": "C:\\Users\\AminKhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Handlers\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AminKhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj": {
+                "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj"
+              },
+              "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Data\\Amazon.Api.Data.csproj": {
+                "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Data\\Amazon.Api.Data.csproj"
+              },
+              "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Entities\\Amazon.Api.Entities.csproj": {
+                "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Entities\\Amazon.Api.Entities.csproj"
+              },
+              "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Services\\Amazon.Api.Services.csproj": {
+                "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Services\\Amazon.Api.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Services\\Amazon.Api.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Services\\Amazon.Api.Services.csproj",
+        "projectName": "Amazon.Api.Services",
+        "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Services\\Amazon.Api.Services.csproj",
+        "packagesPath": "C:\\Users\\AminKhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AminKhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj": {
+                "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj"
+              },
+              "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Data\\Amazon.Api.Data.csproj": {
+                "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Data\\Amazon.Api.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api\\Amazon.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api\\Amazon.Api.csproj",
+        "projectName": "Amazon.Api",
+        "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api\\Amazon.Api.csproj",
+        "packagesPath": "C:\\Users\\AminKhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AminKhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Business\\Amazon.Api.Business.csproj": {
+                "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Business\\Amazon.Api.Business.csproj"
+              },
+              "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj": {
+                "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj"
+              },
+              "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj": {
+                "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj"
+              },
+              "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Services\\Amazon.Api.Services.csproj": {
+                "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Services\\Amazon.Api.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

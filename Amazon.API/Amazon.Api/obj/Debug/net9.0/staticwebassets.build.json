@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "8TyssTHFYNX9KhWJxAdNmqT83422q7U+cq3ubkyuEmc=",
+  "Source": "Amazon.Api",
+  "BasePath": "_content/Amazon.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
