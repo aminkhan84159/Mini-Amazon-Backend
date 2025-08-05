@@ -15,6 +15,7 @@ using Amazon.Api.Handlers.UserCart;
 using Amazon.Api.Services.Interfaces;
 using Amazon.Api.Services.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
@@ -130,7 +131,8 @@ public class Program {
 
     private static void RegisterContext(WebApplicationBuilder builder)
     {
-        builder.Services.AddDbContext<AmazonContext>();
+        builder.Services.AddDbContext<AmazonContext>(options =>
+            options.UseNpgsql(builder.Configuration.GetConnectionString("NeonDbConnection")));
     }
 
     private static void RegisterValidator(WebApplicationBuilder builder)
