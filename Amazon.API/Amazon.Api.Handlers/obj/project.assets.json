@@ -3195,11 +3195,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj",
+      "projectUniqueName": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj",
       "projectName": "Amazon.Api.Handlers",
-      "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj",
+      "projectPath": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj",
       "packagesPath": "C:\\Users\\AminKhan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Handlers\\obj\\",
+      "outputPath": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Handlers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3220,17 +3220,17 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj": {
-              "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj"
+            "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj": {
+              "projectPath": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj"
             },
-            "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Data\\Amazon.Api.Data.csproj": {
-              "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Data\\Amazon.Api.Data.csproj"
+            "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Data\\Amazon.Api.Data.csproj": {
+              "projectPath": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Data\\Amazon.Api.Data.csproj"
             },
-            "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Entities\\Amazon.Api.Entities.csproj": {
-              "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Entities\\Amazon.Api.Entities.csproj"
+            "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Entities\\Amazon.Api.Entities.csproj": {
+              "projectPath": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Entities\\Amazon.Api.Entities.csproj"
             },
-            "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Services\\Amazon.Api.Services.csproj": {
-              "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Services\\Amazon.Api.Services.csproj"
+            "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Services\\Amazon.Api.Services.csproj": {
+              "projectPath": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Services\\Amazon.Api.Services.csproj"
             }
           }
         }
@@ -3272,7 +3272,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

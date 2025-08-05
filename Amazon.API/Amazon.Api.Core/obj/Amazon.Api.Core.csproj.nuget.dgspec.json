@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj": {}
+    "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj": {
+    "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj",
+        "projectUniqueName": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj",
         "projectName": "Amazon.Api.Core",
-        "projectPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj",
+        "projectPath": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj",
         "packagesPath": "C:\\Users\\AminKhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Core\\obj\\",
+        "outputPath": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -95,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

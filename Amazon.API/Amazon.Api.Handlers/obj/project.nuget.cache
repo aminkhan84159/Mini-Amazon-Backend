@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "se6HYdfSYZ4=",
+  "dgSpecHash": "id1OUIqi+a8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\AminKhan\\source\\repos\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj",
+  "projectFilePath": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AminKhan\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\AminKhan\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
