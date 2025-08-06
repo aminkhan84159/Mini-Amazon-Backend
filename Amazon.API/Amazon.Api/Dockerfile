@@ -1,21 +1,28 @@
-# Build Stage
+# Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-COPY *.sln .
-COPY . .  # Copies all folders including Amazon.api and others
+# Copy solution and project files
+COPY ./Amazon.Api.sln .                               # Assuming the .sln is inside Amazon.Api
+COPY ./Amazon.Api/*.csproj ./Amazon.Api/
 
-WORKDIR /app/Amazon.api
-RUN dotnet restore
+# Restore dependencies
+RUN dotnet restore ./Amazon.Api.sln
+
+# Copy all source code
+COPY . .
+
+# Build the project
+WORKDIR /app/Amazon.Api
 RUN dotnet publish -c Release -o out
 
-# Runtime Stage
+# Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
-COPY --from=build /app/Amazon.api/out ./
+COPY --from=build /app/Amazon.Api/out ./
 
 ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
 
-ENTRYPOINT ["dotnet", "Amazon.api.dll"]
+ENTRYPOINT ["dotnet", "Amazon.Api.dll"]
 
