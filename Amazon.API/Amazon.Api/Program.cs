@@ -135,6 +135,8 @@ public class Program {
 
     private static void RegisterContext(WebApplicationBuilder builder)
     {
+        builder.Configuration["ConnectionStrings:NeonDbConnection"] = Environment.GetEnvironmentVariable("ConnectionStrings__NeonDbConnection");
+        
         builder.Services.AddDbContext<AmazonContext>(options =>
             options.UseNpgsql(builder.Configuration.GetConnectionString("NeonDbConnection")));
     }
