@@ -1,27 +1,25 @@
-# Build Stage
+# ---------- Build Stage ----------
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
+WORKDIR /src
 
-# Copy solution and project files (they're in current folder)
-COPY Amazon.API.sln .
-COPY Amazon.Api.csproj ./
-
-# Restore dependencies
-RUN dotnet restore
-
-# Copy all project files
+# Copy everything in the current directory (where Dockerfile is)
 COPY . .
 
-# Build the project
-RUN dotnet publish -c Release -o out
+# Restore and build the solution
+RUN dotnet restore Amazon.Api.sln
+RUN dotnet publish Amazon.Api.csproj -c Release -o /app/publish
 
-# Runtime Stage
+# ---------- Runtime Stage ----------
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
-COPY --from=build /app/out ./
 
+# Copy the published output from build stage
+COPY --from=build /app/publish .
+
+# Set environment and expose port
 ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
 
+# Start the app
 ENTRYPOINT ["dotnet", "Amazon.Api.dll"]
 
