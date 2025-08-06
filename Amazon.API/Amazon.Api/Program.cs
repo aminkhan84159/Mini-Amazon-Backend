@@ -45,6 +45,13 @@ public class Program {
             });
         });
 
+        builder.Configuration
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json")
+            .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
+            .AddEnvironmentVariables();
+
+
         RegisterContext(builder);
         RegisterValidator(builder);
         RegisterSerilog(builder);
