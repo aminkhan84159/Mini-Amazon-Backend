@@ -59,6 +59,7 @@ public class Program {
         RegisterHandler(builder);
         RegisterManager(builder);
 
+        builder.Configuration["Jwt:Key"] = Environment.GetEnvironmentVariable("Key");
         builder.Services.AddAuthentication(options =>
         {
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
