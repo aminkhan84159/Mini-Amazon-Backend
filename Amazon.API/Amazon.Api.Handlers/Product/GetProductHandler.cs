@@ -57,7 +57,7 @@ namespace Amazon.Api.Handlers.Product
                     UpdatedBy = product.ProductDetail.UpdatedBy,
                     UpdatedOn = product.ProductDetail.UpdatedOn
                 },
-                Reviews = product.Reviews.Select(x => new ReviewDto()
+                Reviews = product.Reviews.Count != 0 ? product.Reviews.Select(x => new ReviewDto() 
                 {
                     ReviewId = x.ReviewId,
                     ProductId = x.ProductId,
@@ -70,8 +70,8 @@ namespace Amazon.Api.Handlers.Product
                     CreatedOn = x.CreatedOn,
                     UpdatedBy = x.UpdatedBy,
                     UpdatedOn = x.UpdatedOn
-                }).ToList(),
-                Tags = product.Tags.Select(x => new TagDto()
+                }).ToList() : null,
+                Tags = product.Tags.Count != 0 ? product.Tags.Select(x => new TagDto()
                 {
                     TagId = x.TagId,
                     ProductId = x.ProductId,
@@ -81,8 +81,8 @@ namespace Amazon.Api.Handlers.Product
                     CreatedOn = x.CreatedOn,
                     UpdatedBy = x.UpdatedBy,
                     UpdatedOn = x.UpdatedOn
-                }).ToList(),
-                Images = product.Images.Select(x => new ImageDto()
+                }).ToList() : null,
+                Images = product.Images.Count != 0 ? product.Images.Select(x => new ImageDto()
                 {
                     ImageId = x.ImageId,
                     ProductId = x.ProductId,
@@ -95,7 +95,7 @@ namespace Amazon.Api.Handlers.Product
                     CreatedOn = x.CreatedOn,
                     UpdatedBy = x.UpdatedBy,
                     UpdatedOn = x.UpdatedOn
-                }).ToList()
+                }).ToList() : null
             };
             return Success();
         }

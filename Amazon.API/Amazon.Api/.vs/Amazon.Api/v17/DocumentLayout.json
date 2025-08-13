@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8BB5DB52-B47C-43B6-BCCC-4854E59B100B}|..\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj|c:\\users\\aminkhan\\source\\repos\\aminkhan84159\\mini-amazon-backend\\amazon.api\\amazon.api.handlers\\product\\getproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56EDD3F2-EB24-4AC9-8071-2B541358BB2B}|..\\Amazon.Api.Entities\\Amazon.Api.Entities.csproj|c:\\users\\aminkhan\\source\\repos\\aminkhan84159\\mini-amazon-backend\\amazon.api\\amazon.api.entities\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB5DB52-B47C-43B6-BCCC-4854E59B100B}|..\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj|c:\\users\\aminkhan\\source\\repos\\aminkhan84159\\mini-amazon-backend\\amazon.api\\amazon.api.handlers\\image\\updateimagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB5DB52-B47C-43B6-BCCC-4854E59B100B}|..\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj|c:\\users\\aminkhan\\source\\repos\\aminkhan84159\\mini-amazon-backend\\amazon.api\\amazon.api.handlers\\image\\addimagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A0E6C63D-0FFA-4D21-B7BA-46A76AB4DD34}|Amazon.Api.csproj|c:\\users\\aminkhan\\source\\repos\\aminkhan84159\\mini-amazon-backend\\amazon.api\\amazon.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A0E6C63D-0FFA-4D21-B7BA-46A76AB4DD34}|Amazon.Api.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -56,11 +68,63 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateImageHandler.cs",
+              "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Handlers\\Image\\UpdateImageHandler.cs",
+              "RelativeDocumentMoniker": "..\\Amazon.Api.Handlers\\Image\\UpdateImageHandler.cs",
+              "ToolTip": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Handlers\\Image\\UpdateImageHandler.cs",
+              "RelativeToolTip": "..\\Amazon.Api.Handlers\\Image\\UpdateImageHandler.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvx4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T09:29:02.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddImageHandler.cs",
+              "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Handlers\\Image\\AddImageHandler.cs",
+              "RelativeDocumentMoniker": "..\\Amazon.Api.Handlers\\Image\\AddImageHandler.cs",
+              "ToolTip": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Handlers\\Image\\AddImageHandler.cs",
+              "RelativeToolTip": "..\\Amazon.Api.Handlers\\Image\\AddImageHandler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvx0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T09:28:59.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Entities\\Dtos\\ProductDto.cs",
+              "RelativeDocumentMoniker": "..\\Amazon.Api.Entities\\Dtos\\ProductDto.cs",
+              "ToolTip": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Entities\\Dtos\\ProductDto.cs",
+              "RelativeToolTip": "..\\Amazon.Api.Entities\\Dtos\\ProductDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA5wBMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T09:27:53.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GetProductHandler.cs",
+              "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Handlers\\Product\\GetProductHandler.cs",
+              "RelativeDocumentMoniker": "..\\Amazon.Api.Handlers\\Product\\GetProductHandler.cs",
+              "ToolTip": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Handlers\\Product\\GetProductHandler.cs*",
+              "RelativeToolTip": "..\\Amazon.Api.Handlers\\Product\\GetProductHandler.cs*",
+              "ViewState": "AgIAADoAAAAAAAAAAADwv1QAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T07:59:52.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -73,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "Microsoft.PackageDependencyResolution.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.302\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
@@ -81,77 +145,71 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.302\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
               "ViewState": "AgIAAA0BAAAAAAAAAAAvwAkBAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-08-06T10:43:52.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T10:43:52.897Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Amazon.Api.Services",
+              "DocumentIndex": 13,
+              "Title": "Amazon.Api.Services.csproj",
               "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Services\\Amazon.Api.Services.csproj",
               "RelativeDocumentMoniker": "..\\Amazon.Api.Services\\Amazon.Api.Services.csproj",
               "ToolTip": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Services\\Amazon.Api.Services.csproj",
               "RelativeToolTip": "..\\Amazon.Api.Services\\Amazon.Api.Services.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-06T10:43:08.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T10:43:08.401Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Amazon.Api.Handlers",
+              "DocumentIndex": 9,
+              "Title": "Amazon.Api.Handlers.csproj",
               "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj",
               "RelativeDocumentMoniker": "..\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj",
               "ToolTip": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj",
               "RelativeToolTip": "..\\Amazon.Api.Handlers\\Amazon.Api.Handlers.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-06T10:43:01.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T10:43:01.929Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Amazon.Api.Entities",
+              "DocumentIndex": 14,
+              "Title": "Amazon.Api.Entities.csproj",
               "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Entities\\Amazon.Api.Entities.csproj",
               "RelativeDocumentMoniker": "..\\Amazon.Api.Entities\\Amazon.Api.Entities.csproj",
               "ToolTip": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Entities\\Amazon.Api.Entities.csproj",
               "RelativeToolTip": "..\\Amazon.Api.Entities\\Amazon.Api.Entities.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-06T10:42:54.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T10:42:54.872Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Amazon.Api.Business",
+              "DocumentIndex": 10,
+              "Title": "Amazon.Api.Business.csproj",
               "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Business\\Amazon.Api.Business.csproj",
               "RelativeDocumentMoniker": "..\\Amazon.Api.Business\\Amazon.Api.Business.csproj",
               "ToolTip": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Business\\Amazon.Api.Business.csproj",
               "RelativeToolTip": "..\\Amazon.Api.Business\\Amazon.Api.Business.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-06T10:42:35.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T10:42:35.248Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Amazon.Api",
+              "DocumentIndex": 11,
+              "Title": "Amazon.Api.csproj",
               "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api\\Amazon.Api.csproj",
               "RelativeDocumentMoniker": "Amazon.Api.csproj",
               "ToolTip": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api\\Amazon.Api.csproj",
               "RelativeToolTip": "Amazon.Api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-06T10:42:22.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T10:42:22.608Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -159,12 +217,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAjwEIAAAB0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T09:43:53.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T09:43:53.646Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "AddUserHandler.cs",
               "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Handlers\\User\\AddUserHandler.cs",
               "RelativeDocumentMoniker": "..\\Amazon.Api.Handlers\\User\\AddUserHandler.cs",
@@ -172,12 +229,11 @@
               "RelativeToolTip": "..\\Amazon.Api.Handlers\\User\\AddUserHandler.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAgwEcAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T10:00:15.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T10:00:15.178Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "AmazonContext.cs",
               "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Data\\AmazonContext.cs",
               "RelativeDocumentMoniker": "..\\Amazon.Api.Data\\AmazonContext.cs",
@@ -185,25 +241,23 @@
               "RelativeToolTip": "..\\Amazon.Api.Data\\AmazonContext.cs",
               "ViewState": "AgIAAEQAAAAAAAAAAADwvyEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T10:53:01.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T10:53:01.979Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Amazon.Api.Data",
+              "DocumentIndex": 15,
+              "Title": "Amazon.Api.Data.csproj",
               "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Data\\Amazon.Api.Data.csproj",
               "RelativeDocumentMoniker": "..\\Amazon.Api.Data\\Amazon.Api.Data.csproj",
               "ToolTip": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Data\\Amazon.Api.Data.csproj",
               "RelativeToolTip": "..\\Amazon.Api.Data\\Amazon.Api.Data.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-06T10:42:48.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T10:42:48.879Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -211,25 +265,23 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAADOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-05T09:43:46.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T09:43:46.646Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Amazon.Api.Core",
+              "DocumentIndex": 16,
+              "Title": "Amazon.Api.Core.csproj",
               "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj",
               "RelativeDocumentMoniker": "..\\Amazon.Api.Core\\Amazon.Api.Core.csproj",
               "ToolTip": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Core\\Amazon.Api.Core.csproj",
               "RelativeToolTip": "..\\Amazon.Api.Core\\Amazon.Api.Core.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-06T10:42:41.814Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T10:42:41.814Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "LoginUserHandler.cs",
               "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Handlers\\User\\LoginUserHandler.cs",
               "RelativeDocumentMoniker": "..\\Amazon.Api.Handlers\\User\\LoginUserHandler.cs",
@@ -237,8 +289,7 @@
               "RelativeToolTip": "..\\Amazon.Api.Handlers\\User\\LoginUserHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T10:00:55.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T10:00:55.186Z"
             }
           ]
         }
