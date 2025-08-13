@@ -9,7 +9,7 @@ namespace Amazon.Api.Entities.Messages.ProductDetail
         public int Stock { get; set; }
         public string Sku { get; set; } = null!;
         public decimal Weight { get; set; }
-        public int? Discount { get; set; }
+        public decimal? Discount { get; set; }
         public string Warranty { get; set; } = null!;
         public string ReturnPolicy { get; set; } = null!;
     }
