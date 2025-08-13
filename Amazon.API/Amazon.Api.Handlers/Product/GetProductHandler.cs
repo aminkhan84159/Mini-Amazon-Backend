@@ -57,7 +57,7 @@ namespace Amazon.Api.Handlers.Product
                     UpdatedBy = product.ProductDetail.UpdatedBy,
                     UpdatedOn = product.ProductDetail.UpdatedOn
                 },
-                Reviews = product.Reviews.Count != 0 ? product.Reviews.Select(x => new ReviewDto() 
+                Reviews = product.Reviews is not null ? product.Reviews.Select(x => new ReviewDto() 
                 {
                     ReviewId = x.ReviewId,
                     ProductId = x.ProductId,
@@ -71,7 +71,7 @@ namespace Amazon.Api.Handlers.Product
                     UpdatedBy = x.UpdatedBy,
                     UpdatedOn = x.UpdatedOn
                 }).ToList() : null,
-                Tags = product.Tags.Count != 0 ? product.Tags.Select(x => new TagDto()
+                Tags = product.Tags is not null ? product.Tags.Select(x => new TagDto()
                 {
                     TagId = x.TagId,
                     ProductId = x.ProductId,
@@ -82,7 +82,7 @@ namespace Amazon.Api.Handlers.Product
                     UpdatedBy = x.UpdatedBy,
                     UpdatedOn = x.UpdatedOn
                 }).ToList() : null,
-                Images = product.Images.Count != 0 ? product.Images.Select(x => new ImageDto()
+                Images = product.Images is not null ? product.Images.Select(x => new ImageDto()
                 {
                     ImageId = x.ImageId,
                     ProductId = x.ProductId,
