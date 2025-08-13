@@ -157,6 +157,7 @@ public partial class AmazonContext : DbContext
             entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
             entity.Property(e => e.Warranty).HasMaxLength(100);
             entity.Property(e => e.Weight).HasColumnType("decimal(6, 2)");
+            entity.Property(e => e.Discount).HasColumnType("decimal(5, 2)");
 
             entity.HasOne(d => d.Product).WithOne(p => p.ProductDetail)
                 .HasForeignKey<ProductDetail>(d => d.ProductId)
