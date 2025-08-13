@@ -1,0 +1,15 @@
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\bin\Debug\net8.0\Amazon.Api.Core.deps.json
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\bin\Debug\net8.0\Amazon.Api.Core.runtimeconfig.json
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\bin\Debug\net8.0\Amazon.Api.Core.dll
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\bin\Debug\net8.0\Amazon.Api.Core.pdb
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\obj\Debug\net8.0\Amazon.Api.Core.csproj.AssemblyReference.cache
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\obj\Debug\net8.0\Amazon.Api.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\obj\Debug\net8.0\Amazon.Api.Core.AssemblyInfoInputs.cache
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\obj\Debug\net8.0\Amazon.Api.Core.AssemblyInfo.cs
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\obj\Debug\net8.0\Amazon.Api.Core.csproj.CoreCompileInputs.cache
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\obj\Debug\net8.0\Amazon.Api.Core.sourcelink.json
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\obj\Debug\net8.0\Amazon.Api.Core.dll
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\obj\Debug\net8.0\refint\Amazon.Api.Core.dll
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\obj\Debug\net8.0\Amazon.Api.Core.pdb
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\obj\Debug\net8.0\Amazon.Api.Core.genruntimeconfig.cache
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Core\obj\Debug\net8.0\ref\Amazon.Api.Core.dll
