@@ -15,8 +15,8 @@
         public DateTime? UpdatedOn { get; set; }
 
         public ProductDetailDto ProductDetails { get; set; } = null!;
-        public List<ReviewDto> Reviews { get; set; }
-        public List<TagDto> Tags { get; set; }
-        public List<ImageDto> Images { get; set; }
+        public List<ReviewDto> Reviews { get; set; } = null!;
+        public List<TagDto> Tags { get; set; } = null!;
+        public List<ImageDto> Images { get; set; } = null!;
     }
 }

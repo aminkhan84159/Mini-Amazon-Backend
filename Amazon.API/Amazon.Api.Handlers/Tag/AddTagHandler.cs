@@ -20,7 +20,6 @@ namespace Amazon.Api.Handlers.Tag
             {
                 var tag = new Data.Entities.Tag()
                 {
-                    ProductId = Request.ProductId,
                     Tags = tags,
                     CreatedBy = 101,
                     CreatedOn = DateTime.UtcNow

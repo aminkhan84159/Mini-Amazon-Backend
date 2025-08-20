@@ -23,6 +23,7 @@ public partial class AmazonContext : DbContext
     public virtual DbSet<Product> Products { get; set; }
 
     public virtual DbSet<ProductDetail> ProductDetails { get; set; }
+    public virtual DbSet<ProductTag> ProductTags { get; set; }
 
     public virtual DbSet<Review> Reviews { get; set; }
 
@@ -36,217 +37,240 @@ public partial class AmazonContext : DbContext
     {
         modelBuilder.Entity<Cart>(entity =>
         {
-            entity.HasKey(e => e.CartId).HasName("PK_Cart_CartId");
+            entity.HasKey(e => e.CartId).HasName("Cart_pkey");
 
             entity.ToTable("Cart");
 
-            entity.HasIndex(e => e.UserId, "UQ_Cart_UserId").IsUnique();
+            entity.HasIndex(e => e.UserId, "Cart_UserId_key").IsUnique();
 
             entity.Property(e => e.CreatedBy).HasDefaultValue(1);
             entity.Property(e => e.CreatedOn)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp with time zone");
             entity.Property(e => e.IsActive).HasDefaultValue(true);
-            entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
+            entity.Property(e => e.UpdatedOn).HasColumnType("timestamp with time zone");
 
             entity.HasOne(d => d.User).WithOne(p => p.Cart)
                 .HasForeignKey<Cart>(d => d.UserId)
-                .HasConstraintName("FK_Cart_UserId__User_UserId");
+                .HasConstraintName("Cart_UserId_fkey");
         });
 
         modelBuilder.Entity<Image>(entity =>
         {
-            entity.HasKey(e => e.ImageId).HasName("PK_Image_ImageId");
+            entity.HasKey(e => e.ImageId).HasName("Image_pkey");
+
+            entity.ToTable("Image");
 
             entity.Property(e => e.CreatedBy).HasDefaultValue(1);
             entity.Property(e => e.CreatedOn)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp with time zone");
             entity.Property(e => e.Images).HasColumnName("Image");
             entity.Property(e => e.ImageName).HasMaxLength(100);
             entity.Property(e => e.ImageType).HasMaxLength(100);
             entity.Property(e => e.ImageTypeId).HasDefaultValue(101);
             entity.Property(e => e.IsActive).HasDefaultValue(true);
-            entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
+            entity.Property(e => e.UpdatedOn).HasColumnType("timestamp with time zone");
 
             entity.HasOne(d => d.ImageTypes).WithMany(p => p.Images)
                 .HasForeignKey(d => d.ImageTypeId)
-                .HasConstraintName("FK_Image_ImageTypeId__ImageType_ImageTypeId");
+                .HasConstraintName("Image_ImageTypeId_fkey");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Images)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK_Images_ProductId__Product_ProductId");
+                .HasConstraintName("Image_ProductId_fkey");
         });
 
         modelBuilder.Entity<ImageType>(entity =>
         {
-            entity.HasKey(e => e.ImageTypeId).HasName("PK_ImageType_ImageTypeId");
+            entity.HasKey(e => e.ImageTypeId).HasName("ImageType_pkey");
 
             entity.ToTable("ImageType");
 
             entity.Property(e => e.CreatedBy).HasDefaultValue(1);
             entity.Property(e => e.CreatedOn)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp with time zone");
             entity.Property(e => e.Description).HasMaxLength(150);
             entity.Property(e => e.IsActive).HasDefaultValue(true);
             entity.Property(e => e.Name).HasMaxLength(50);
-            entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
+            entity.Property(e => e.UpdatedOn).HasColumnType("timestamp with time zone");
         });
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.OrderId).HasName("PK_Order_OrderId");
+            entity.HasKey(e => e.OrderId).HasName("Order_pkey");
 
             entity.ToTable("Order");
 
             entity.Property(e => e.CreatedBy).HasDefaultValue(1);
             entity.Property(e => e.CreatedOn)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp with time zone");
             entity.Property(e => e.IsActive).HasDefaultValue(true);
-            entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
+            entity.Property(e => e.UpdatedOn).HasColumnType("timestamp with time zone");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK_Order_ProductId__Product_ProductId");
+                .HasConstraintName("Order_ProductId_fkey");
 
             entity.HasOne(d => d.User).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK_Order_UserId__User_UserId");
+                .HasConstraintName("Order_UserId_fkey");
         });
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK_Product_ProductId");
+            entity.HasKey(e => e.ProductId).HasName("Product_pkey");
 
             entity.ToTable("Product");
 
-            entity.HasIndex(e => new { e.Title, e.Category }, "UQ_Product_Title_Category").IsUnique();
+            entity.HasIndex(e => new { e.Title, e.Category }, "Product_Title_Category_key").IsUnique();
 
             entity.Property(e => e.Brand).HasMaxLength(100);
             entity.Property(e => e.Category).HasMaxLength(100);
             entity.Property(e => e.CreatedBy).HasDefaultValue(1);
             entity.Property(e => e.CreatedOn)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp with time zone");
             entity.Property(e => e.IsActive).HasDefaultValue(true);
-            entity.Property(e => e.Price).HasColumnType("decimal(12, 2)");
-            entity.Property(e => e.Rating).HasColumnType("decimal(3, 1)");
+            entity.Property(e => e.Price).HasPrecision(12, 2);
+            entity.Property(e => e.Rating).HasPrecision(3, 1);
             entity.Property(e => e.Title).HasMaxLength(100);
-            entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
+            entity.Property(e => e.UpdatedOn).HasColumnType("timestamp with time zone");
+
+            entity.HasOne(d => d.Tag).WithMany(p => p.Products)
+                .HasForeignKey(d => d.TagId)
+                .HasConstraintName("Product_TagId_fkey");
         });
 
         modelBuilder.Entity<ProductDetail>(entity =>
         {
-            entity.HasKey(e => e.ProductDetailId).HasName("PK_ProductDetail_ProductDetailId");
+            entity.HasKey(e => e.ProductDetailId).HasName("ProductDetail_pkey");
 
             entity.ToTable("ProductDetail");
 
-            entity.HasIndex(e => e.ProductId, "UQ_ProductDetail_ProductId").IsUnique();
+            entity.HasIndex(e => e.ProductId, "ProductDetail_ProductId_key").IsUnique();
 
             entity.Property(e => e.CreatedBy).HasDefaultValue(1);
             entity.Property(e => e.CreatedOn)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp with time zone");
+            entity.Property(e => e.Discount).HasPrecision(5, 2);
             entity.Property(e => e.IsActive).HasDefaultValue(true);
             entity.Property(e => e.ReturnPolicy).HasMaxLength(100);
+            entity.Property(e => e.Shipping).HasMaxLength(100);
             entity.Property(e => e.Sku)
                 .HasMaxLength(100)
                 .HasColumnName("sku");
-            entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
+            entity.Property(e => e.UpdatedOn).HasColumnType("timestamp with time zone");
             entity.Property(e => e.Warranty).HasMaxLength(100);
-            entity.Property(e => e.Weight).HasColumnType("decimal(6, 2)");
-            entity.Property(e => e.Discount).HasColumnType("decimal(5, 2)");
+            entity.Property(e => e.Weight).HasPrecision(6, 2);
 
             entity.HasOne(d => d.Product).WithOne(p => p.ProductDetail)
                 .HasForeignKey<ProductDetail>(d => d.ProductId)
-                .HasConstraintName("FK_ProductDetail_ProductId__Product_ProductId");
+                .HasConstraintName("ProductDetail_ProductId_fkey");
+        });
+
+        modelBuilder.Entity<ProductTag>(entity =>
+        {
+            entity.HasKey(e => e.ProductTagId).HasName("ProductTag_pkey");
+
+            entity.ToTable("ProductTag");
+
+            entity.HasOne(d => d.Product).WithMany(p => p.ProductTags)
+                .HasForeignKey(d => d.ProductId)
+                .HasConstraintName("ProductTag_ProductId_fkey");
+
+            entity.HasOne(d => d.Tag).WithMany(p => p.ProductTags)
+                .HasForeignKey(d => d.TagId)
+                .HasConstraintName("ProductTag_TagId_fkey");
         });
 
         modelBuilder.Entity<Review>(entity =>
         {
-            entity.HasKey(e => e.ReviewId).HasName("PK_Review_ReviewId");
+            entity.HasKey(e => e.ReviewId).HasName("Review_pkey");
 
-            entity.HasIndex(e => e.ReviewerEmail, "UQ_Reviews_ReviewerEmail").IsUnique();
+            entity.ToTable("Review");
+
+            entity.HasIndex(e => e.ReviewerEmail, "Review_ReviewerEmail_key").IsUnique();
 
             entity.Property(e => e.CreatedBy).HasDefaultValue(1);
             entity.Property(e => e.CreatedOn)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp with time zone");
             entity.Property(e => e.IsActive).HasDefaultValue(true);
-            entity.Property(e => e.Rating).HasColumnType("decimal(3, 1)");
+            entity.Property(e => e.Rating).HasPrecision(3, 1);
             entity.Property(e => e.ReviewerEmail).HasMaxLength(100);
             entity.Property(e => e.ReviewerName).HasMaxLength(100);
-            entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
+            entity.Property(e => e.UpdatedOn).HasColumnType("timestamp with time zone");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK_Reviews_ProductId__Product_ProductId");
+                .HasConstraintName("Review_ProductId_fkey");
         });
 
         modelBuilder.Entity<Tag>(entity =>
         {
-            entity.HasKey(e => e.TagId).HasName("PK_Tags_TagId");
+            entity.HasKey(e => e.TagId).HasName("Tag_pkey");
+
+            entity.ToTable("Tag");
 
             entity.Property(e => e.CreatedBy).HasDefaultValue(1);
             entity.Property(e => e.CreatedOn)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp with time zone");
             entity.Property(e => e.IsActive).HasDefaultValue(true);
             entity.Property(e => e.Tags).HasColumnName("Tag");
-            entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
-
-            entity.HasOne(d => d.Product).WithMany(p => p.Tags)
-                .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK_Tags_ProductId__Product_ProductId");
+            entity.Property(e => e.UpdatedOn).HasColumnType("timestamp with time zone");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK_User_UserId");
+            entity.HasKey(e => e.UserId).HasName("User_pkey");
 
             entity.ToTable("User");
 
-            entity.HasIndex(e => e.Email, "UQ_User_Email").IsUnique();
+            entity.HasIndex(e => e.Email, "User_Email_key").IsUnique();
 
-            entity.HasIndex(e => e.PhoneNo, "UQ_User_PhoneNo").IsUnique();
+            entity.HasIndex(e => e.PhoneNo, "User_PhoneNo_key").IsUnique();
 
-            entity.HasIndex(e => e.Username, "UQ_User_Username").IsUnique();
+            entity.HasIndex(e => e.Username, "User_Username_key").IsUnique();
 
             entity.Property(e => e.CreatedBy).HasDefaultValue(1);
             entity.Property(e => e.CreatedOn)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp with time zone");
             entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.FirstName).HasMaxLength(100);
             entity.Property(e => e.IsActive).HasDefaultValue(true);
             entity.Property(e => e.LastName).HasMaxLength(100);
             entity.Property(e => e.PhoneNo).HasMaxLength(10);
-            entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
+            entity.Property(e => e.Role).HasMaxLength(20);
+            entity.Property(e => e.UpdatedOn).HasColumnType("timestamp with time zone");
             entity.Property(e => e.Username).HasMaxLength(100);
         });
 
         modelBuilder.Entity<UserCart>(entity =>
         {
-            entity.HasKey(e => e.UserCartId).HasName("PK_UserCart_UserCartId");
+            entity.HasKey(e => e.UserCartId).HasName("UserCart_pkey");
 
             entity.ToTable("UserCart");
 
             entity.Property(e => e.CreatedBy).HasDefaultValue(1);
             entity.Property(e => e.CreatedOn)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp with time zone");
             entity.Property(e => e.IsActive).HasDefaultValue(true);
-            entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
+            entity.Property(e => e.UpdatedOn).HasColumnType("timestamp with time zone");
 
             entity.HasOne(d => d.Cart).WithMany(p => p.UserCarts)
                 .HasForeignKey(d => d.CartId)
-                .HasConstraintName("FK_UserCart_CartId_Cart_CartId");
+                .HasConstraintName("UserCart_CartId_fkey");
 
             entity.HasOne(d => d.Product).WithMany(p => p.UserCarts)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK_UserCart_ProductId__Product_ProdcutId");
+                .HasConstraintName("UserCart_ProductId_fkey");
         });
 
         OnModelCreatingPartial(modelBuilder);

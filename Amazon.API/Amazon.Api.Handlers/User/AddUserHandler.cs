@@ -48,6 +48,7 @@ namespace Amazon.Api.Handlers.User
                 Username = Request.Username,
                 Password = Request.Password,
                 PhoneNo = Request.PhoneNo,
+                Role = Request.Role,
                 CreatedOn = DateTime.UtcNow
             };
 
