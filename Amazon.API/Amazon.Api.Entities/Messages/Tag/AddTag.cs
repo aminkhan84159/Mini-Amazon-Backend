@@ -4,12 +4,11 @@ namespace Amazon.Api.Entities.Messages.Tag
 {
     public class AddTagRequest : RequestBase
     {
-        public int ProductId { get; set; }
-        public List<string> Tags { get; set; }
+        public string Tags { get; set; } = null!;
     }
 
     public class AddTagResponse : ResponseBase
     {
-        public List<int> TagId { get; set; }
+        public int TagId { get; set; }
     }
 }
