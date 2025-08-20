@@ -22,7 +22,6 @@ namespace Amazon.Api.Handlers.Tag
             var tagDetails = new Entities.Dtos.TagDto()
             {
                 TagId = tag.TagId,
-                ProductId = tag.ProductId,
                 Tags = tag.Tags,
                 IsActive = tag.IsActive,
                 CreatedBy = tag.CreatedBy,

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Amazon.API",
+    "\\Amazon.API\\Amazon.Api"
   ],
-  "SelectedNode": "\\Amazon.Api.sln",
+  "SelectedNode": "\\Amazon.API\\Amazon.Api\\Amazon.Api.sln",
   "PreviewInSolutionExplorer": false
 }

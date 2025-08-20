@@ -59,7 +59,7 @@ public class Program {
         RegisterHandler(builder);
         RegisterManager(builder);
 
-        builder.Configuration["Jwt:Key"] = Environment.GetEnvironmentVariable("Key");
+        //builder.Configuration["Jwt:Key"] = Environment.GetEnvironmentVariable("Key");
         builder.Services.AddAuthentication(options =>
         {
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -136,7 +136,7 @@ public class Program {
 
     private static void RegisterContext(WebApplicationBuilder builder)
     {
-        builder.Configuration["ConnectionStrings:NeonDbConnection"] = Environment.GetEnvironmentVariable("ConnectionStrings__NeonDbConnection");
+        //builder.Configuration["ConnectionStrings:NeonDbConnection"] = Environment.GetEnvironmentVariable("ConnectionStrings__NeonDbConnection");
         
         builder.Services.AddDbContext<AmazonContext>(options =>
             options.UseNpgsql(builder.Configuration.GetConnectionString("NeonDbConnection")));

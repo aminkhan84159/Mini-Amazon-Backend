@@ -20,7 +20,7 @@ namespace Amazon.Api.Handlers.Product
                 .Include(x => x.ProductDetail)
                 .Include(x => x.Reviews)
                 .Include(x => x.Images)
-                .Include(x => x.Tags)
+                .Include(x => x.Tag)
                 .Where(x => x.ProductId == Request.ProductId)
                 .FirstOrDefaultAsync();
 
@@ -42,7 +42,7 @@ namespace Amazon.Api.Handlers.Product
                 UpdatedOn = product.UpdatedOn,
                 ProductDetails = new ProductDetailDto()
                 {
-                    ProductDetailId = product.ProductDetail.ProductDetailId,
+                    ProductDetailId = product.ProductDetail!.ProductDetailId,
                     ProductId = product.ProductDetail.ProductId,
                     Description = product.ProductDetail.Description,
                     Stock = product.ProductDetail.Stock,
@@ -57,7 +57,7 @@ namespace Amazon.Api.Handlers.Product
                     UpdatedBy = product.ProductDetail.UpdatedBy,
                     UpdatedOn = product.ProductDetail.UpdatedOn
                 },
-                Reviews = product.Reviews is not null ? product.Reviews.Select(x => new ReviewDto() 
+                Reviews = product.Reviews.Select(x => new ReviewDto()
                 {
                     ReviewId = x.ReviewId,
                     ProductId = x.ProductId,
@@ -70,24 +70,25 @@ namespace Amazon.Api.Handlers.Product
                     CreatedOn = x.CreatedOn,
                     UpdatedBy = x.UpdatedBy,
                     UpdatedOn = x.UpdatedOn
-                }).ToList() : null,
-                Tags = product.Tags is not null ? product.Tags.Select(x => new TagDto()
+                }).ToList(),
+                Tags = new List<TagDto>()
                 {
-                    TagId = x.TagId,
-                    ProductId = x.ProductId,
-                    Tags = x.Tags,
-                    IsActive = x.IsActive,
-                    CreatedBy = x.CreatedBy,
-                    CreatedOn = x.CreatedOn,
-                    UpdatedBy = x.UpdatedBy,
-                    UpdatedOn = x.UpdatedOn
-                }).ToList() : null,
-                Images = product.Images is not null ? product.Images.Select(x => new ImageDto()
+                    new TagDto(){
+                        TagId = product.Tag.TagId,
+                        Tags = product.Tag.Tags,
+                        IsActive = product.Tag.IsActive,
+                        CreatedBy = product.Tag.CreatedBy,
+                        CreatedOn = product.Tag.CreatedOn,
+                        UpdatedBy = product.Tag.UpdatedBy,
+                        UpdatedOn = product.Tag.UpdatedOn
+                    }
+                }.ToList(),
+                Images = product.Images.Select(x => new ImageDto()
                 {
                     ImageId = x.ImageId,
                     ProductId = x.ProductId,
                     ImageTypeId = x.ImageTypeId,
-                    Images = Convert.ToBase64String(x.Images),
+                    Images = Convert.ToBase64String(x.Images!),
                     ImageName = x.ImageName,
                     ImageType = x.ImageType,
                     IsActive = x.IsActive,
@@ -95,7 +96,7 @@ namespace Amazon.Api.Handlers.Product
                     CreatedOn = x.CreatedOn,
                     UpdatedBy = x.UpdatedBy,
                     UpdatedOn = x.UpdatedOn
-                }).ToList() : null
+                }).ToList()
             };
             return Success();
         }
