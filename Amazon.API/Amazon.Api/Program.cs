@@ -8,6 +8,7 @@ using Amazon.Api.Handlers.ImageType;
 using Amazon.Api.Handlers.Order;
 using Amazon.Api.Handlers.Product;
 using Amazon.Api.Handlers.ProductDetail;
+using Amazon.Api.Handlers.ProductTag;
 using Amazon.Api.Handlers.Review;
 using Amazon.Api.Handlers.Tag;
 using Amazon.Api.Handlers.User;
@@ -112,6 +113,7 @@ public class Program {
         builder.Services.AddTransient<IProductService, ProductService>();
         builder.Services.AddTransient<IProductDetailService, ProductDetailService>();
         builder.Services.AddTransient<ITagService, TagService>();
+        builder.Services.AddTransient<IProductTagService, ProductTagService>();
         builder.Services.AddTransient<IReviewService, ReviewService>();
         builder.Services.AddTransient<IImageService, ImageService>();
         builder.Services.AddTransient<IOrderService, OrderService>();
@@ -127,6 +129,7 @@ public class Program {
         builder.Services.AddTransient<ProductManager>();
         builder.Services.AddTransient<ProductDetailManager>();
         builder.Services.AddTransient<TagManager>();
+        builder.Services.AddTransient<ProductTagManager>();
         builder.Services.AddTransient<ReviewManager>();
         builder.Services.AddTransient<ImageManager>();
         builder.Services.AddTransient<OrderManager>();
@@ -149,6 +152,7 @@ public class Program {
         builder.Services.AddTransient<ProductValidator>();
         builder.Services.AddTransient<ProductDetailValidator>();
         builder.Services.AddTransient<TagValidator>();
+        builder.Services.AddTransient<ProductTagValidator>();
         builder.Services.AddTransient<ReviewValidator>();
         builder.Services.AddTransient<ImageValidator>();
         builder.Services.AddTransient<OrderValidator>();
@@ -191,6 +195,12 @@ public class Program {
         builder.Services.AddTransient<AddTagHandler>();
         builder.Services.AddTransient<UpdateTagHandler>();
         builder.Services.AddTransient<DeleteTagHandler>();
+
+        builder.Services.AddTransient<GetProductTagListHandler>();
+        builder.Services.AddTransient<GetProductTagHandler>();
+        builder.Services.AddTransient<AddProductTagHandler>();
+        builder.Services.AddTransient<UpdateProductTagHandler>();
+        builder.Services.AddTransient<DeleteProductTagHandler>();
 
         builder.Services.AddTransient<GetReviewListHandler>();
         builder.Services.AddTransient<GetReviewHandler>();

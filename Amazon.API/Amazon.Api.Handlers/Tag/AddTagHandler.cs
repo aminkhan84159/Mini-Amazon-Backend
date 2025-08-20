@@ -2,6 +2,7 @@
 using Amazon.Api.Data;
 using Amazon.Api.Entities.Messages.Tag;
 using Amazon.Api.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Amazon.Api.Handlers.Tag
@@ -14,23 +15,25 @@ namespace Amazon.Api.Handlers.Tag
     {
         protected async override Task<bool> HandleCoreAsync()
         {
-            List<int> tagId = new List<int>();
+            if (string.IsNullOrWhiteSpace(Request.Tags))
+                return BadRequest("Tag cannot be empty");
 
-            foreach (var tags in Request.Tags)
+            var existingTag = await _tagDataService.GetAll()
+                .Where(x => x.Tags == Request.Tags)
+                .FirstOrDefaultAsync();
+
+            if (existingTag is not null)
+                return Conflict($"Tag '{Request.Tags}' already exists");
+
+            var tag = new Data.Entities.Tag()
             {
-                var tag = new Data.Entities.Tag()
-                {
-                    Tags = tags,
-                    CreatedBy = 101,
-                    CreatedOn = DateTime.UtcNow
-                };
+                Tags = Request.Tags,
+                CreatedOn = DateTime.UtcNow,
+            };
 
-                tagId.Add(tag.TagId);
+            await _tagDataService.AddAsync(tag);
 
-                await _tagDataService.AddAsync(tag);
-            }
-
-            Response.TagId = tagId;
+            Response.TagId = tag.TagId;
             return Success();
         }
     }

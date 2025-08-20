@@ -3,7 +3,6 @@
     public class TagDto
     {
         public int TagId { get; set; }
-        public int ProductId { get; set; }
         public string? Tags { get; set; }
         public bool? IsActive { get; set; }
         public int CreatedBy { get; set; }

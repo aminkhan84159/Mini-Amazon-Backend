@@ -21,6 +21,7 @@ namespace Amazon.Api.Handlers.Product
                 .Include(x => x.Reviews)
                 .Include(x => x.Images)
                 .Include(x => x.Tag)
+                .Include(x => x.ProductTags)
                 .Where(x => x.ProductId == Request.ProductId)
                 .FirstOrDefaultAsync();
 
@@ -83,6 +84,12 @@ namespace Amazon.Api.Handlers.Product
                         UpdatedOn = product.Tag.UpdatedOn
                     }
                 }.ToList(),
+                ProductTags = product.ProductTags.Select(x => new ProductTagDto()
+                {
+                    ProductTagId = x.ProductTagId,
+                    ProductId = x.ProductId,
+                    TagId = x.TagId,
+                }).ToList(),
                 Images = product.Images.Select(x => new ImageDto()
                 {
                     ImageId = x.ImageId,
