@@ -67,7 +67,8 @@ namespace Amazon.Api.Handlers.User
                     {
                         new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]!),
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                        new Claim("UserId", user.UserId.ToString())
+                        new Claim("UserId", user.UserId.ToString()),
+                        new Claim("Role", user.Role)
                     };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
