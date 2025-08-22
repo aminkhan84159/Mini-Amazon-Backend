@@ -139,9 +139,9 @@ public partial class AmazonContext : DbContext
             entity.Property(e => e.Title).HasMaxLength(100);
             entity.Property(e => e.UpdatedOn).HasColumnType("timestamp with time zone");
 
-            entity.HasOne(d => d.Tag).WithMany(p => p.Products)
-                .HasForeignKey(d => d.TagId)
-                .HasConstraintName("Product_TagId_fkey");
+            entity.HasOne(d => d.User).WithMany(p => p.Products)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("Product_UserId_fkey");
         });
 
         modelBuilder.Entity<ProductDetail>(entity =>
