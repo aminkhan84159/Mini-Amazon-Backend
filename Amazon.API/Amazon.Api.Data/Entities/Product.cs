@@ -6,7 +6,7 @@ namespace Amazon.Api.Data.Entities;
 public partial class Product
 {
     public int ProductId { get; set; }
-    public int TagId { get; set; }
+    public int UserId { get; set; }
     public string Title { get; set; } = null!;
     public string? Brand { get; set; }
     public string Category { get; set; } = null!;
@@ -23,6 +23,6 @@ public partial class Product
     public virtual ProductDetail? ProductDetail { get; set; }
     public virtual ICollection<ProductTag> ProductTags { get; set; } = new List<ProductTag>();
     public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
-    public virtual Tag Tag { get; set; } = null!;
     public virtual ICollection<UserCart> UserCarts { get; set; } = new List<UserCart>();
+    public virtual User User { get; set; } = null!;
 }

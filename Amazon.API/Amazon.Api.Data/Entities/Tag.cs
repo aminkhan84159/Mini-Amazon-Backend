@@ -14,6 +14,4 @@ public partial class Tag
     public DateTime? UpdatedOn { get; set; }
 
     public virtual ICollection<ProductTag> ProductTags { get; set; } = new List<ProductTag>();
-
-    public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 }
