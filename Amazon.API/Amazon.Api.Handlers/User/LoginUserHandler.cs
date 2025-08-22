@@ -26,7 +26,7 @@ namespace Amazon.Api.Handlers.User
                 .FirstOrDefaultAsync();
 
             if (user is null)
-                return NotFound($"Inavlid Creadentials");
+                return NotFound($"Inavlid Credentials");
 
             var claims = new[]
                     {
