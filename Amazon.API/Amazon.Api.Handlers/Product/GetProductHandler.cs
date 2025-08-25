@@ -20,8 +20,7 @@ namespace Amazon.Api.Handlers.Product
                 .Include(x => x.ProductDetail)
                 .Include(x => x.Reviews)
                 .Include(x => x.Images)
-                .Include(x => x.Tag)
-                .Include(x => x.ProductTags)
+                .Include(x => x.ProductTags.Where(z => z.ProductId == x.ProductId).Select(y => y.Tag))
                 .Where(x => x.ProductId == Request.ProductId)
                 .FirstOrDefaultAsync();
 
@@ -31,6 +30,7 @@ namespace Amazon.Api.Handlers.Product
             Response.ProductDetails = new ProductDto()
             {
                 ProductId = product.ProductId,
+                UserId = product.UserId,
                 Title = product.Title,
                 Brand = product.Brand,
                 Category = product.Category,
@@ -72,23 +72,21 @@ namespace Amazon.Api.Handlers.Product
                     UpdatedBy = x.UpdatedBy,
                     UpdatedOn = x.UpdatedOn
                 }).ToList(),
-                Tags = new List<TagDto>()
-                {
-                    new TagDto(){
-                        TagId = product.Tag.TagId,
-                        Tags = product.Tag.Tags,
-                        IsActive = product.Tag.IsActive,
-                        CreatedBy = product.Tag.CreatedBy,
-                        CreatedOn = product.Tag.CreatedOn,
-                        UpdatedBy = product.Tag.UpdatedBy,
-                        UpdatedOn = product.Tag.UpdatedOn
-                    }
-                }.ToList(),
                 ProductTags = product.ProductTags.Select(x => new ProductTagDto()
                 {
-                    ProductTagId = x.ProductTagId,
-                    ProductId = x.ProductId,
-                    TagId = x.TagId,
+                    Tag = new List<TagDto>()
+                    {
+                        new TagDto()
+                        {
+                            TagId = x.Tag.TagId,
+                            Tags = x.Tag.Tags,
+                            IsActive = x.Tag.IsActive,
+                            CreatedBy = x.Tag.CreatedBy,
+                            CreatedOn = x.Tag.CreatedOn,
+                            UpdatedBy = x.Tag.UpdatedBy,
+                            UpdatedOn = x.Tag.UpdatedOn
+                        }
+                    },
                 }).ToList(),
                 Images = product.Images.Select(x => new ImageDto()
                 {

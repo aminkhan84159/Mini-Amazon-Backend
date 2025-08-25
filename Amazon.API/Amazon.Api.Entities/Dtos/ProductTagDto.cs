@@ -5,5 +5,7 @@
         public int ProductTagId { get; set; }
         public int ProductId { get; set; }
         public int TagId { get; set; }
+
+        public List<TagDto> Tag { get; set; } = null!;
     }
 }

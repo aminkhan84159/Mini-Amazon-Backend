@@ -3,6 +3,7 @@
     public class ProductDto
     {
         public int ProductId { get; set; }
+        public int UserId { get; set; }
         public string Title { get; set; } = null!;
         public string? Brand { get; set; }
         public string Category { get; set; } = null!;
@@ -16,7 +17,6 @@
 
         public ProductDetailDto ProductDetails { get; set; } = null!;
         public List<ReviewDto> Reviews { get; set; } = null!;
-        public List<TagDto> Tags { get; set; } = null!;
         public List<ProductTagDto> ProductTags { get; set; } = null!;
         public List<ImageDto> Images { get; set; } = null!;
     }

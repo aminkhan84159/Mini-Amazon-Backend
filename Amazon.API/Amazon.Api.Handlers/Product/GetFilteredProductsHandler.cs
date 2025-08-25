@@ -24,6 +24,7 @@ namespace Amazon.Api.Handlers.Product
             var productList = products.Select(x => new ProductDto
             {
                 ProductId = x.ProductId,
+                UserId = x.UserId,
                 Title = x.Title,
                 Brand = x.Brand,
                 Category = x.Category,

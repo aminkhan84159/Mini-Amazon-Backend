@@ -143,6 +143,8 @@ public class Program {
         
         builder.Services.AddDbContext<AmazonContext>(options =>
             options.UseNpgsql(builder.Configuration.GetConnectionString("NeonDbConnection")));
+
+        builder.Services.AddHttpContextAccessor();
     }
 
     private static void RegisterValidator(WebApplicationBuilder builder)
