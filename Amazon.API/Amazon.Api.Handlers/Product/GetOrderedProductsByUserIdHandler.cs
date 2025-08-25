@@ -43,6 +43,7 @@ namespace Amazon.Api.Handlers.Product
                 Products = new ProductDto()
                 {
                     ProductId = x.Product.ProductId,
+                    UserId = x.Product.UserId,
                     Title = x.Product.Title,
                     Brand = x.Product.Brand,
                     Category = x.Product.Category,

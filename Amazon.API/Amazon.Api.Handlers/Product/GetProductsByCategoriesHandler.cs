@@ -25,6 +25,7 @@ namespace Amazon.Api.Handlers.Product
             Response.Products = products.Select(x => new Entities.Dtos.ProductDto
             {
                 ProductId = x.ProductId,
+                UserId = x.UserId,
                 Title = x.Title,
                 Brand = x.Brand,
                 Category = x.Category,

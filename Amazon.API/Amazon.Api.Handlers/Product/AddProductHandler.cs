@@ -2,6 +2,7 @@
 using Amazon.Api.Data;
 using Amazon.Api.Entities.Messages.Product;
 using Amazon.Api.Services.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -10,7 +11,8 @@ namespace Amazon.Api.Handlers.Product
     public class AddProductHandler(
         ILogger _logger,
         AmazonContext _amazonContext,
-        IProductService _productService)
+        IProductService _productService,
+        IHttpContextAccessor _httpContextAccessor)
         : HandlerBase<AddProductRequest, AddProductResponse>(_logger, _amazonContext)
     {
         protected override async Task<bool> HandleCoreAsync()
@@ -27,6 +29,7 @@ namespace Amazon.Api.Handlers.Product
 
             var product = new Data.Entities.Product()
             {
+                UserId = int.Parse(_httpContextAccessor.HttpContext!.User.Claims.Where(x => x.Type == "UserId").FirstOrDefault()!.Value),
                 Title = Request.Title,
                 Brand = Request.Brand,
                 Category = Request.Category,
