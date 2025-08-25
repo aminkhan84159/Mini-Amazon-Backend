@@ -27,7 +27,7 @@ namespace Amazon.Api.Handlers.Image
             if (imageType is null)
                 return NotFound($"ImageType with ID {Request.ImageTypeId} not found");
 
-            if (Request.Images.Count == 0)
+            if (Request.Images!.Count == 0)
             {
                 throw new ArgumentNullException();
             }

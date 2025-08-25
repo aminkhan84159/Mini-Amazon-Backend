@@ -39,27 +39,20 @@ namespace Amazon.Api.Core.ServiceFramework.Handlers
 
             try
             {
-                if (true)
+                var transactionOptions = new TransactionOptions()
                 {
-                    var transactionOptions = new TransactionOptions()
-                    {
-                        IsolationLevel = IsolationLevel.Snapshot
-                    };
+                    IsolationLevel = IsolationLevel.Snapshot
+                };
 
-                    using (var transaction = new TransactionScope(TransactionScopeOption.Required, transactionOptions, TransactionScopeAsyncFlowOption.Enabled))
-                    {
-                        // Logic to be implemented by child classes occurs here.
-                        var success = HandleCore();
+                using (var transaction = new TransactionScope(TransactionScopeOption.Required, transactionOptions, TransactionScopeAsyncFlowOption.Enabled))
+                {
+                    // Logic to be implemented by child classes occurs here.
+                    var success = HandleCore();
 
-                        if (success)
-                        {
-                            transaction.Complete();
-                        }
+                    if (success)
+                    {
+                        transaction.Complete();
                     }
-                }
-                else
-                {
-                    Forbidden();
                 }
             }
             catch (Exception ex)
@@ -99,36 +92,28 @@ namespace Amazon.Api.Core.ServiceFramework.Handlers
 
             try
             {
-                if (true)
-                {
-                    var strategy = _dbContext.Database.CreateExecutionStrategy();
+                var strategy = _dbContext.Database.CreateExecutionStrategy();
 
-                    await strategy.ExecuteAsync(async () =>
+                await strategy.ExecuteAsync(async () =>
+                {
+                    var transactionOptions = new TransactionOptions
                     {
-                        var transactionOptions = new TransactionOptions
-                        {
-                            IsolationLevel = IsolationLevel.Snapshot
-                        };
+                        IsolationLevel = IsolationLevel.Snapshot
+                    };
 
-                        using (var transaction = new TransactionScope(
-                            TransactionScopeOption.Required,
-                            transactionOptions,
-                            TransactionScopeAsyncFlowOption.Enabled))
-                        {
-                            var success = await HandleCoreAsync();
+                    using (var transaction = new TransactionScope(
+                        TransactionScopeOption.Required,
+                        transactionOptions,
+                        TransactionScopeAsyncFlowOption.Enabled))
+                    {
+                        var success = await HandleCoreAsync();
 
-                            if (success)
-                            {
-                                transaction.Complete();
-                            }
+                        if (success)
+                        {
+                            transaction.Complete();
                         }
-                    });
-
-                }
-                else
-                {
-                    Forbidden();
-                }
+                    }
+                });
             }
             catch (Exception ex)
             {

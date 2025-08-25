@@ -50,7 +50,7 @@ namespace Amazon.Api.Handlers.Product
                     ImageId = y.ImageId,
                     ProductId = y.ProductId,
                     ImageTypeId = y.ProductId,
-                    Images = Convert.ToBase64String(y.Images),
+                    Images = Convert.ToBase64String(y.Images!),
                     ImageName = y.ImageName,
                     ImageType = y.ImageType,
                     IsActive = y.IsActive,
@@ -61,7 +61,7 @@ namespace Amazon.Api.Handlers.Product
                 }).ToList(),
                 ProductDetails = new ProductDetailDto()
                 {
-                    ProductDetailId = x.ProductDetail.ProductDetailId,
+                    ProductDetailId = x.ProductDetail!.ProductDetailId,
                     ProductId = x.ProductDetail.ProductId,
                     Description = x.ProductDetail.Description,
                     Stock = x.ProductDetail.Stock,

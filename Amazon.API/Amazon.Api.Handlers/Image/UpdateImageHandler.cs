@@ -28,7 +28,7 @@ namespace Amazon.Api.Handlers.Image
 
             using (var stream = new System.IO.MemoryStream())
             {
-                await Request.Images.CopyToAsync(stream);
+                await Request.Images!.CopyToAsync(stream);
 
                 image.ImageTypeId = Request.ImageTypeId;
                 image.Images = stream.ToArray();

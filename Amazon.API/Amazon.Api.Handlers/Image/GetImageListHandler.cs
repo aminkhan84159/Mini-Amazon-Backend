@@ -29,7 +29,7 @@ namespace Amazon.Api.Handlers.Image
                 ImageId = x.ImageId,
                 ImageTypeId = x.ImageTypeId,
                 ProductId = x.ProductId,
-                Images = Convert.ToBase64String(x.Images),
+                Images = Convert.ToBase64String(x.Images!),
                 ImageName = x.ImageName,
                 ImageType = x.ImageType,
                 IsActive = x.IsActive,
