@@ -17,7 +17,7 @@
 
         public ProductDetailDto ProductDetails { get; set; } = null!;
         public List<ReviewDto> Reviews { get; set; } = null!;
-        public List<ProductTagDto> ProductTags { get; set; } = null!;
+        public List<TagDto> Tag { get; set; } = null!;
         public List<ImageDto> Images { get; set; } = null!;
     }
 }
