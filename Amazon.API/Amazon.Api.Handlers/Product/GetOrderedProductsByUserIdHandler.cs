@@ -23,8 +23,8 @@ namespace Amazon.Api.Handlers.Product
                 return NotFound($"User with ID  {Request.UserId} not found");
 
             var orders = await _orderService.GetAll()
-                .Where(x => x.UserId == Request.UserId)
                 .Include(x => x.Product)
+                .Where(x => x.UserId == Request.UserId)
                 .ToListAsync();
 
             if (orders is null || orders.Count == 0)
