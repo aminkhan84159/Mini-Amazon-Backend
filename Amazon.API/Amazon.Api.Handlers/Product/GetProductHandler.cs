@@ -20,7 +20,8 @@ namespace Amazon.Api.Handlers.Product
                 .Include(x => x.ProductDetail)
                 .Include(x => x.Reviews)
                 .Include(x => x.Images)
-                .Include(x => x.ProductTags.Where(z => z.ProductId == x.ProductId).Select(y => y.Tag))
+                .Include(x => x.ProductTags)
+                    .ThenInclude(y => y.Tag)
                 .Where(x => x.ProductId == Request.ProductId)
                 .FirstOrDefaultAsync();
 
@@ -72,22 +73,18 @@ namespace Amazon.Api.Handlers.Product
                     UpdatedBy = x.UpdatedBy,
                     UpdatedOn = x.UpdatedOn
                 }).ToList(),
-                ProductTags = product.ProductTags.Select(x => new ProductTagDto()
-                {
-                    Tag = new List<TagDto>()
-                    {
-                        new TagDto()
-                        {
-                            TagId = x.Tag.TagId,
-                            Tags = x.Tag.Tags,
-                            IsActive = x.Tag.IsActive,
-                            CreatedBy = x.Tag.CreatedBy,
-                            CreatedOn = x.Tag.CreatedOn,
-                            UpdatedBy = x.Tag.UpdatedBy,
-                            UpdatedOn = x.Tag.UpdatedOn
-                        }
-                    },
-                }).ToList(),
+                Tag = product.ProductTags
+                      .Where(y => y.Tag != null)
+                      .Select(y => new TagDto()
+                      {
+                            TagId = y.Tag!.TagId,
+                            Tags = y.Tag.Tags,
+                            IsActive = y.Tag.IsActive,
+                            CreatedBy = y.Tag.CreatedBy,
+                            CreatedOn = y.Tag.CreatedOn,
+                            UpdatedBy = y.Tag.UpdatedBy,
+                            UpdatedOn = y.Tag.UpdatedOn
+                        }).ToList(),
                 Images = product.Images.Select(x => new ImageDto()
                 {
                     ImageId = x.ImageId,
