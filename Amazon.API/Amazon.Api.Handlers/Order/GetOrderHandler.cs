@@ -3,6 +3,7 @@ using Amazon.Api.Data;
 using Amazon.Api.Entities.Dtos;
 using Amazon.Api.Entities.Messages.Order;
 using Amazon.Api.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Amazon.Api.Handlers.Order
@@ -15,7 +16,9 @@ namespace Amazon.Api.Handlers.Order
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var order = await _orderService.GetByIdAsync(Request.OrderId);
+            var order = await _orderService.GetAll()
+                .Where(x => x.OrderId == Request.OrderId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (order is null)
                 return NotFound($"Order with ID {Request.OrderId} not found");

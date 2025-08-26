@@ -2,6 +2,7 @@
 using Amazon.Api.Data;
 using Amazon.Api.Entities.Messages.ProductTag;
 using Amazon.Api.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Amazon.Api.Handlers.ProductTag
@@ -17,7 +18,9 @@ namespace Amazon.Api.Handlers.ProductTag
             if (Request.ProductTagId <= 0)
                 return BadRequest("ProductTagId must be greater than zero");
 
-            var productTag = await _productTagService.GetByIdAsync(Request.ProductTagId);
+            var productTag = await _productTagService.GetAll()
+                .Where(x => x.ProductTagId == Request.ProductTagId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (productTag is null)
                 return NotFound($"Product tag with ID {Request.ProductTagId} not found");

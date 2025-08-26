@@ -3,6 +3,7 @@ using Amazon.Api.Data;
 using Amazon.Api.Entities.Dtos;
 using Amazon.Api.Entities.Messages.UserCart;
 using Amazon.Api.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Amazon.Api.Handlers.UserCart
@@ -15,7 +16,9 @@ namespace Amazon.Api.Handlers.UserCart
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var userCart = await _userCartService.GetByIdAsync(Request.UserCartId);
+            var userCart = await _userCartService.GetAll()
+                .Where(x => x.UserCartId == Request.UserCartId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (userCart is null)
                 return NotFound($"User cart with ID {Request.UserCartId} not found");

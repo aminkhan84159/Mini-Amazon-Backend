@@ -178,6 +178,8 @@ public partial class AmazonContext : DbContext
 
             entity.ToTable("ProductTag");
 
+            entity.Property(e => e.IsActive).HasDefaultValue(true);
+
             entity.HasOne(d => d.Product).WithMany(p => p.ProductTags)
                 .HasForeignKey(d => d.ProductId)
                 .HasConstraintName("ProductTag_ProductId_fkey");

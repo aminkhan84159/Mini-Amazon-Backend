@@ -24,7 +24,7 @@ namespace Amazon.Api.Handlers.Product
 
             var orders = await _orderService.GetAll()
                 .Include(x => x.Product)
-                .Where(x => x.UserId == Request.UserId)
+                .Where(x => x.UserId == Request.UserId && x.IsActive == true)
                 .ToListAsync();
 
             if (orders is null || orders.Count == 0)
@@ -56,9 +56,9 @@ namespace Amazon.Api.Handlers.Product
                     UpdatedOn = x.Product.UpdatedOn,
                     ProductDetails = new ProductDetailDto()
                     {
-                        ProductDetailId = x.Product.ProductDetail.ProductDetailId,
+                        ProductDetailId = x.Product.ProductDetail!.ProductDetailId,
                         ProductId = x.Product.ProductDetail.ProductId,
-                        Description = x.Product.ProductDetail.Description,
+                        Description = x.Product.ProductDetail.Description
                     }
                 }
             }).ToList();

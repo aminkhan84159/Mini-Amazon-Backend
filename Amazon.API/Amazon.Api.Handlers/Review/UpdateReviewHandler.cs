@@ -3,6 +3,7 @@ using Amazon.Api.Data;
 using Amazon.Api.Entities.Dtos;
 using Amazon.Api.Entities.Messages.Review;
 using Amazon.Api.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Amazon.Api.Handlers.Review
@@ -15,7 +16,9 @@ namespace Amazon.Api.Handlers.Review
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var review = await _reviewService.GetByIdAsync(Request.ReviewId);
+            var review = await _reviewService.GetAll()
+                .Where(x => x.ReviewId == Request.ReviewId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (review is null)
                 return NotFound($"Review with ID {Request.ReviewId} not found");

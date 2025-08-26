@@ -2,6 +2,7 @@
 using Amazon.Api.Data;
 using Amazon.Api.Entities.Messages.Image;
 using Amazon.Api.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Amazon.Api.Handlers.Image
@@ -14,12 +15,18 @@ namespace Amazon.Api.Handlers.Image
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var image = await _imageService.GetByIdAsync(Request.ImageId);
+            var image = await _imageService.GetAll()
+                .Where(x => x.ImageId == Request.ImageId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (image is null)
                 return NotFound($"Image with ID {Request.ImageId} not found");
 
-            await _imageService.DeleteAsync(image);
+            image.IsActive = false;
+            image.UpdatedBy = 101;
+            image.UpdatedOn = DateTime.UtcNow;
+
+            await _imageService.UpdateAsync(image);
 
             Response.ImageId = image.ImageId;
             return Success();

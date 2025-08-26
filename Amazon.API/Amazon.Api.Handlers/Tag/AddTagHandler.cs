@@ -28,6 +28,7 @@ namespace Amazon.Api.Handlers.Tag
             var tag = new Data.Entities.Tag()
             {
                 Tags = Request.Tags,
+                CreatedBy = 101,
                 CreatedOn = DateTime.UtcNow,
             };
 

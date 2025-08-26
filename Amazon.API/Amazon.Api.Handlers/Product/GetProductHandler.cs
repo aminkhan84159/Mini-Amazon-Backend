@@ -18,11 +18,11 @@ namespace Amazon.Api.Handlers.Product
         {
             var product = await _productService.GetAll()
                 .Include(x => x.ProductDetail)
-                .Include(x => x.Reviews)
-                .Include(x => x.Images)
+                .Include(x => x.Reviews.Where(r => r.IsActive == true))
+                .Include(x => x.Images.Where(i => i.IsActive == true))
                 .Include(x => x.ProductTags)
                     .ThenInclude(y => y.Tag)
-                .Where(x => x.ProductId == Request.ProductId)
+                .Where(x => x.ProductId == Request.ProductId && x.IsActive == true)
                 .FirstOrDefaultAsync();
 
             if (product is null)
@@ -74,7 +74,8 @@ namespace Amazon.Api.Handlers.Product
                     UpdatedOn = x.UpdatedOn
                 }).ToList(),
                 Tag = product.ProductTags
-                      // .Where(y => y.Tag != null)
+                  .Where(y => y.IsActive == true)
+
                       .Select(y => new TagDto()
                       {
                             TagId = y.Tag!.TagId,

@@ -16,7 +16,7 @@ namespace Amazon.Api.Handlers.ImageType
         protected override async Task<bool> HandleCoreAsync()
         {
             var existingImageType = await _imageTypeService.GetAll()
-                .FirstOrDefaultAsync(x => x.Name == Request.Name);
+                .FirstOrDefaultAsync(x => x.Name == Request.Name && x.IsActive == true);
 
             if (existingImageType is not null)
             {

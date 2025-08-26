@@ -4,6 +4,7 @@ using Amazon.Api.Entities.Dtos;
 using Amazon.Api.Entities.Messages.User;
 using Amazon.Api.Services.Interfaces;
 using Amazon.Api.Services.Service;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Amazon.Api.Handlers.User
@@ -16,7 +17,9 @@ namespace Amazon.Api.Handlers.User
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var user = await _userDataService.GetByIdAsync(Request.UserId);
+            var user = await _userDataService.GetAll()
+                .Where(x => x.UserId == Request.UserId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (user is null)
                 return NotFound($"User with ID  {Request.UserId} not found");

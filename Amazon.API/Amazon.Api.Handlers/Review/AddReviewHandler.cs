@@ -2,6 +2,7 @@
 using Amazon.Api.Data;
 using Amazon.Api.Entities.Messages.Review;
 using Amazon.Api.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Amazon.Api.Handlers.Review
@@ -15,7 +16,9 @@ namespace Amazon.Api.Handlers.Review
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var product = await _productService.GetByIdAsync(Request.ProductId);
+            var product = await _productService.GetAll()
+                .Where(x => x.ProductId == Request.ProductId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (product is null)
                 return NotFound($"Product with ID {Request.ProductId} not found");

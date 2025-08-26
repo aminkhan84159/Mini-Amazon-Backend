@@ -17,18 +17,22 @@ namespace Amazon.Api.Handlers.ProductTag
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var product = await _productService.GetByIdAsync(Request.ProductId);
+            var product = await _productService.GetAll()
+                .Where(x => x.ProductId == Request.ProductId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (product is null)
                 return NotFound($"Product with ID {Request.ProductId} not found");
 
-            var tag = await _tagService.GetByIdAsync(Request.TagId);
+            var tag = await _tagService.GetAll()
+                .Where(x => x.TagId == Request.TagId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (tag is null)
                 return NotFound($"Tag with ID {Request.TagId} not found");
 
             var existingProductTag = await _productTagService.GetAll()
-                .Where(x => x.ProductId == Request.ProductId && x.TagId == Request.TagId)
+                .Where(x => x.ProductId == Request.ProductId && x.TagId == Request.TagId && x.IsActive == true)
                 .FirstOrDefaultAsync();
 
             if (existingProductTag is not null)

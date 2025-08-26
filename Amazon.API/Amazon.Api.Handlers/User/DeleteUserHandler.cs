@@ -16,16 +16,28 @@ namespace Amazon.Api.Handlers.User
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var user = await _userDataService.GetByIdAsync(Request.UserId);
+            var user = await _userDataService.GetAll()
+                .Where(x => x.UserId == Request.UserId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (user is null)
                 return NotFound($"User with ID {Request.UserId} not found");
 
-            await _userDataService.DeleteAsync(user);
+            user.IsActive = false;
+            user.UpdatedBy = 101;
+            user.UpdatedOn = DateTime.UtcNow;
 
-            var cart = await _cartService.GetAll().Where(x => x.UserId == user.UserId).FirstOrDefaultAsync();
+            await _userDataService.UpdateAsync(user);
 
-            await _cartService.DeleteAsync(cart);
+            var cart = await _cartService.GetAll()
+                .Where(x => x.UserId == user.UserId)
+                .FirstOrDefaultAsync();
+
+            cart!.IsActive = false;
+            cart.UpdatedBy = 101;
+            cart.UpdatedOn = DateTime.UtcNow;
+
+            await _cartService.UpdateAsync(cart);
 
             Response.UserId = user.UserId;
             return Success();

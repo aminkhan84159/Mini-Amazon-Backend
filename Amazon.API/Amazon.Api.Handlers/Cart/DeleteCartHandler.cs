@@ -2,6 +2,7 @@
 using Amazon.Api.Data;
 using Amazon.Api.Entities.Messages.Cart;
 using Amazon.Api.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Amazon.Api.Handlers.Cart
@@ -14,12 +15,18 @@ namespace Amazon.Api.Handlers.Cart
     {
         protected override async Task <bool> HandleCoreAsync()
         {
-            var cart = await _cartService.GetByIdAsync(Request.CartId);
+            var cart = await _cartService.GetAll()
+                .Where(x => x.CartId == Request.CartId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (cart is null)
                 return NotFound($"Cart with ID {Request.CartId} not found");
 
-            await _cartService.DeleteAsync(cart);
+            cart.IsActive = false;
+            cart.UpdatedBy = 101;
+            cart.UpdatedOn = DateTime.UtcNow;
+
+            await _cartService.UpdateAsync(cart);
 
             Response.CartId = cart.CartId;
             return Success();
