@@ -16,13 +16,16 @@ namespace Amazon.Api.Handlers.User
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var user = await _userDataService.GetByIdAsync(Request.UserId);
+            var user = await _userDataService.GetAll()
+                .Where(x => x.UserId == Request.UserId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (user is null)
                 return NotFound($"User with ID  {Request.UserId} not found");
 
             var existingUsers = await _userDataService.GetAll()
-                .Where(x => x.Email == Request.Email || x.Username == Request.Username || x.PhoneNo == Request.PhoneNo).ToListAsync();
+                .Where(x => x.Email == Request.Email || x.Username == Request.Username || x.PhoneNo == Request.PhoneNo && x.IsActive == true)
+                .ToListAsync();
 
             if (user.Email != Request.Email)
             {

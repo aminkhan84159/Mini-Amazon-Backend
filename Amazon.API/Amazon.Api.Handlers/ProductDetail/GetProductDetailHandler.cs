@@ -3,6 +3,7 @@ using Amazon.Api.Data;
 using Amazon.Api.Entities.Dtos;
 using Amazon.Api.Entities.Messages.ProductDetail;
 using Amazon.Api.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Amazon.Api.Handlers.ProductDetail
@@ -15,7 +16,9 @@ namespace Amazon.Api.Handlers.ProductDetail
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var productDetail = await _productDetailService.GetByIdAsync(Request.ProductDetailId);
+            var productDetail = await _productDetailService.GetAll()
+                .Where(x => x.ProductDetailId == Request.ProductDetailId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (productDetail is null)
                 return NotFound($"Product detail with ID {Request.ProductDetailId} not found");

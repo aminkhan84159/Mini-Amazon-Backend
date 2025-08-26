@@ -24,7 +24,7 @@ namespace Amazon.Api.Handlers.Product
 
             var orders = await _orderService.GetAll()
                 .Include(x => x.Product)
-                .Where(x => x.UserId == Request.UserId)
+                .Where(x => x.UserId == Request.UserId && x.IsActive == true)
                 .ToListAsync();
 
             if (orders is null || orders.Count == 0)

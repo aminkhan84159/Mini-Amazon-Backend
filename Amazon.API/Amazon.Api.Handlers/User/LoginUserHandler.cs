@@ -22,7 +22,7 @@ namespace Amazon.Api.Handlers.User
         protected override async Task<bool> HandleCoreAsync()
         {
             var user = await _userService.GetAll()
-                .Where(x => x.Username == Request.info && x.Password == Request.password || x.Email == Request.info && x.Password == Request.password)
+                .Where(x => x.IsActive == true && (x.Username == Request.info && x.Password == Request.password || x.Email == Request.info && x.Password == Request.password))
                 .FirstOrDefaultAsync();
 
             if (user is null)

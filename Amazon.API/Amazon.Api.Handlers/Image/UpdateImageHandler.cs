@@ -3,6 +3,8 @@ using Amazon.Api.Data;
 using Amazon.Api.Entities.Dtos;
 using Amazon.Api.Entities.Messages.Image;
 using Amazon.Api.Services.Interfaces;
+using Microsoft.AspNetCore.Http.Features;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Amazon.Api.Handlers.Image
@@ -16,7 +18,9 @@ namespace Amazon.Api.Handlers.Image
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var image = await _imageService.GetByIdAsync(Request.ImageId);
+            var image = await _imageService.GetAll()
+                .Where(x => x.ImageId == Request.ImageId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (image is null)
                 return NotFound($"Image with ID {Request.ImageId} not found");

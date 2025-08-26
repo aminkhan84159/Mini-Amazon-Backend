@@ -3,6 +3,7 @@ using Amazon.Api.Data;
 using Amazon.Api.Entities.Dtos;
 using Amazon.Api.Entities.Messages.Tag;
 using Amazon.Api.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Amazon.Api.Handlers.Tag
@@ -15,7 +16,9 @@ namespace Amazon.Api.Handlers.Tag
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var tag = await _tagService.GetByIdAsync(Request.TagId);
+            var tag = await _tagService.GetAll()
+                .Where(x => x.TagId == Request.TagId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (tag is null)
                 return NotFound($"Tag with ID {Request.TagId} not found");

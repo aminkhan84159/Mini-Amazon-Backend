@@ -17,13 +17,15 @@ namespace Amazon.Api.Handlers.ProductDetail
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var product = await _productService.GetByIdAsync(Request.ProductId);
+            var product = await _productService.GetAll()
+                .Where(x => x.ProductId == Request.ProductId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (product is null)
                 return NotFound($"Product with ID {Request.ProductId} not found");
 
             var productDetail = await _productDetailService.GetAll()
-                .Where(x => x.ProductId == Request.ProductId)
+                .Where(x => x.ProductId == Request.ProductId && x.IsActive == true)
                 .FirstOrDefaultAsync();
 
             if (productDetail is null)

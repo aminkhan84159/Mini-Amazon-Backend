@@ -19,7 +19,7 @@ namespace Amazon.Api.Handlers.Product
         {
 
             var existingProduct = await _productService.GetAll()
-                .FirstOrDefaultAsync(x => x.Title == Request.Title);
+                .FirstOrDefaultAsync(x => x.Title == Request.Title && x.IsActive == true);
 
             if (existingProduct is not null)
             {

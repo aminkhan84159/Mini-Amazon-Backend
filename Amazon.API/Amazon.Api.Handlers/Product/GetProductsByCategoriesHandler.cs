@@ -16,7 +16,7 @@ namespace Amazon.Api.Handlers.Product
         protected override async Task<bool> HandleCoreAsync()
         {
             var products = await _productService.GetAll()
-                .Where(x => Request.Categories.Contains(x.Category))
+                .Where(x => Request.Categories.Contains(x.Category) && x.IsActive == true)
                 .ToListAsync();
 
             if (products.Count == 0)

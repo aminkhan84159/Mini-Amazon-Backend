@@ -15,12 +15,18 @@ namespace Amazon.Api.Handlers.Tag
     {
         protected async override Task<bool> HandleCoreAsync()
         {
-            var tag = await _tagDataService.GetByIdAsync(Response.TagId);
+            var tag = await _tagDataService.GetAll()
+                .Where(x => x.TagId == Request.TagId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (tag is null)
                 return NotFound($"Tag with id {Request.TagId} not found");
             
-            await _tagDataService.DeleteAsync(tag);
+            tag.IsActive = false;
+            tag.UpdatedBy = 101;
+            tag.UpdatedOn = DateTime.UtcNow;
+
+            await _tagDataService.UpdateAsync(tag);
 
             Response.TagId = tag.TagId;
             return Success();

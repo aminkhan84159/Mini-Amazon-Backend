@@ -2,6 +2,7 @@
 using Amazon.Api.Data;
 using Amazon.Api.Entities.Messages.Order;
 using Amazon.Api.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Amazon.Api.Handlers.Order
@@ -16,12 +17,16 @@ namespace Amazon.Api.Handlers.Order
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var product = await _productService.GetByIdAsync(Request.ProductId);
+            var product = await _productService.GetAll()
+                .Where(x => x.ProductId == Request.ProductId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (product is null)
                 return NotFound($"Product with ID {Request.ProductId} Not found");
 
-            var user = await _userService.GetByIdAsync(Request.UserId);
+            var user = await _userService.GetAll()
+                .Where(x => x.UserId == Request.UserId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (user is null)
                 return NotFound($"User with ID {Request.UserId} Not found");

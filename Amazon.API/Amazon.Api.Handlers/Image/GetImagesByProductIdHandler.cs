@@ -18,13 +18,16 @@ namespace Amazon.Api.Handlers.Image
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var product = await _productService.GetByIdAsync(Request.ProductId);
+            var product = await _productService.GetAll()
+                .Where(x => x.ProductId == Request.ProductId && x.IsActive == true)
+                .FirstOrDefaultAsync();
 
             if (product is null)
                 return NotFound($"Product with ID {Request.ProductId} Not found");
 
             var images = await _imageService.GetAll()
-                .Where(x => x.ProductId == Request.ProductId).ToListAsync();
+                .Where(x => x.ProductId == Request.ProductId && x.IsActive == true)
+                .ToListAsync();
 
             if (images is null || images.Count == 0)
                 return NotFound("No Images found");
