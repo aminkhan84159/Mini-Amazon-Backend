@@ -74,7 +74,8 @@ namespace Amazon.Api.Handlers.Product
                     UpdatedOn = x.UpdatedOn
                 }).ToList(),
                 Tag = product.ProductTags
-                      .Where(y => y.IsActive == true)
+                  .Where(y => y.IsActive == true)
+
                       .Select(y => new TagDto()
                       {
                             TagId = y.Tag!.TagId,

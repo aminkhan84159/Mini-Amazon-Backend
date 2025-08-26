@@ -24,7 +24,6 @@ namespace Amazon.Api.Handlers.User
     {
         protected async override Task<bool> HandleCoreAsync()
         {
-
             var existingUser = await _userDataService.GetAll()
                 .FirstOrDefaultAsync(x => x.IsActive == true && (x.Email == Request.Email || x.Username == Request.Username || x.PhoneNo == Request.PhoneNo));
 
