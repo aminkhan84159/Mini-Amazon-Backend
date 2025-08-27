@@ -24,8 +24,8 @@ namespace Amazon.Api.Handlers.Product
 
             var orders = await _orderService.GetAll()
                 .Where(x => x.UserId == Request.UserId && x.IsActive == true)
-                .Include(x => x.Product)
-                    .ThenInclude(y => y.ProductDetail)
+                .Include(p => p.Product)
+                    .ThenInclude(pd => pd.ProductDetail)
                 .ToListAsync();
 
             if (orders == null || orders.Count == 0)
@@ -67,11 +67,28 @@ namespace Amazon.Api.Handlers.Product
                             CreatedOn = x.Product.ProductDetail.CreatedOn,
                             UpdatedBy = x.Product.ProductDetail.UpdatedBy,
                             UpdatedOn = x.Product.ProductDetail.UpdatedOn
-                        }
+                        },
+                        Images = x.Product.Images!
+                            .Where(i => i.IsActive == true)
+                            .Select(y => new ImageDto
+                            {
+                                ImageId = y.ImageId,
+                                ProductId = y.ProductId,
+                                ImageTypeId = y.ProductId,
+                                Images = Convert.ToBase64String(y.Images!),
+                                ImageName = y.ImageName,
+                                ImageType = y.ImageType,
+                                IsActive = y.IsActive,
+                                CreatedBy = y.CreatedBy,
+                                CreatedOn = y.CreatedOn,
+                                UpdatedBy = y.UpdatedBy,
+                                UpdatedOn = y.UpdatedOn
+                            }).ToList()
                     }
                 }
             }).ToList();
 
+            Response.Orders = order;
             return Success();
         }
     }
