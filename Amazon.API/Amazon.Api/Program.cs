@@ -3,6 +3,7 @@ using Amazon.Api.ConfigureSwagger;
 using Amazon.Api.Data;
 using Amazon.Api.Data.Validators;
 using Amazon.Api.Handlers.Cart;
+using Amazon.Api.Handlers.ConfirmCart;
 using Amazon.Api.Handlers.Image;
 using Amazon.Api.Handlers.ImageType;
 using Amazon.Api.Handlers.Order;
@@ -59,7 +60,7 @@ public class Program {
         RegisterHandler(builder);
         RegisterManager(builder);
 
-        builder.Configuration["Jwt:Key"] = Environment.GetEnvironmentVariable("Key");
+        //builder.Configuration["Jwt:Key"] = Environment.GetEnvironmentVariable("Key");
         builder.Services.AddAuthentication(options =>
         {
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -119,6 +120,7 @@ public class Program {
         builder.Services.AddTransient<IUserCartService, UserCartService>();
         builder.Services.AddTransient<IImageTypeService, ImageTypeService>();
         builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
+        builder.Services.AddTransient<IConfirmCartService, ConfirmCartService>();
     }
 
     private static void RegisterManager(WebApplicationBuilder builder)
@@ -134,11 +136,12 @@ public class Program {
         builder.Services.AddTransient<OrderManager>();
         builder.Services.AddTransient<UserCartManager>();
         builder.Services.AddTransient<ImageTypeManager>();
+        builder.Services.AddTransient<ConfirmCartManager>();
     }
 
     private static void RegisterContext(WebApplicationBuilder builder)
     {
-        builder.Configuration["ConnectionStrings:NeonDbConnection"] = Environment.GetEnvironmentVariable("ConnectionStrings__NeonDbConnection");
+        //builder.Configuration["ConnectionStrings:NeonDbConnection"] = Environment.GetEnvironmentVariable("ConnectionStrings__NeonDbConnection");
         
         builder.Services.AddDbContext<AmazonContext>(options =>
             options.UseNpgsql(builder.Configuration.GetConnectionString("NeonDbConnection")));
@@ -159,6 +162,7 @@ public class Program {
         builder.Services.AddTransient<OrderValidator>();
         builder.Services.AddTransient<UserCartValidator>();
         builder.Services.AddTransient<ImageTypeValidator>();
+        builder.Services.AddTransient<ConfirmCartValidator>();
     }
 
     private static void RegisterHandler(WebApplicationBuilder builder)
@@ -235,6 +239,12 @@ public class Program {
         builder.Services.AddTransient<AddImageTypeHandler>();
         builder.Services.AddTransient<UpdateImageTypeHandler>();
         builder.Services.AddTransient<DeleteImageTypeHandler>();
+
+        builder.Services.AddTransient<GetConfirmCartListHandler>();
+        builder.Services.AddTransient<GetConfirmCartHandler>();
+        builder.Services.AddTransient<AddConfirmCartHandler>();
+        builder.Services.AddTransient<UpdateConfirmCartHandler>();
+        builder.Services.AddTransient<DeleteConfirmCartHandler>();
     }
 
     static void RegisterSerilog(WebApplicationBuilder builder)

@@ -13,6 +13,7 @@ public partial class Cart
     public int? UpdatedBy { get; set; }
     public DateTime? UpdatedOn { get; set; }
 
+    public virtual ICollection<ConfirmCart> ConfirmCarts { get; set; } = new List<ConfirmCart>();
     public virtual User User { get; set; } = null!;
     public virtual ICollection<UserCart> UserCarts { get; set; } = new List<UserCart>();
 }
