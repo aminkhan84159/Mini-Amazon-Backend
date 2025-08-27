@@ -11,6 +11,5 @@ namespace Amazon.Api.Entities.Messages.Product
     public class GetOrderedProductsByUserIdResponse : ResponseBase
     {
         public List<OrderDto> Orders { get; set; } = null!;
-        public List<ProductDto> Products { get; set; } = null!;
     }
 }
