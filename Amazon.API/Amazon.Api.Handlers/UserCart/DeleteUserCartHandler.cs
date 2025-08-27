@@ -22,11 +22,7 @@ namespace Amazon.Api.Handlers.UserCart
             if (userCart is null)
                 return NotFound($"User cart with ID {Request.CartId} not found");
 
-            userCart.IsActive = false;
-            userCart.UpdatedBy = 101;
-            userCart.UpdatedOn = DateTime.UtcNow;
-
-            await _usercartService.UpdateAsync(userCart);
+            await _usercartService.DeleteAsync(userCart);
 
             Response.UserCartId = userCart.UserCartId;
             return Success();
