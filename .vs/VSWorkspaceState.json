@@ -1,11 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Amazon.API",
-    "\\Amazon.API\\Amazon.Api",
-    "\\Amazon.API\\Amazon.Api.Handlers",
-    "\\Amazon.API\\Amazon.Api.Handlers\\User"
+    ""
   ],
-  "SelectedNode": "\\Amazon.API\\Amazon.Api.Handlers\\User\\LoginUserHandler.cs",
   "PreviewInSolutionExplorer": false
 }
