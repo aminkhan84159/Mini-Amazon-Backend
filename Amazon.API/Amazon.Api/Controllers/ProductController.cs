@@ -43,5 +43,16 @@ namespace Amazon.Api.Controllers
                 return Ok(getProductsByCategoriesResponse);
             });
         }
+
+        [HttpPost("GetOrderedProductsByUserId")]
+        public async Task<IActionResult> GetOrderedProductsByUserId([FromBody] GetOrderedProductsByUserIdRequest getOrderedProductsByUserIdRequest)
+        {
+            return await GetResponseAsync(async () =>
+            {
+                var getOrderedProductsByUserIdResponse = await productManager.GetOrderedProductsByUserId(getOrderedProductsByUserIdRequest);
+
+                return Ok(getOrderedProductsByUserIdResponse);
+            });
+        }
     }
 }

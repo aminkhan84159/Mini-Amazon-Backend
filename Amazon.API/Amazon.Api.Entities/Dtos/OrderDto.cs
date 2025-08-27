@@ -11,6 +11,6 @@
         public int? UpdatedBy { get; set; }
         public DateTime? UpdatedOn { get; set; }
 
-        public ProductDto Products { get; set; }
+        public List<ProductDto> Products { get; set; } = null!;
     }
 }

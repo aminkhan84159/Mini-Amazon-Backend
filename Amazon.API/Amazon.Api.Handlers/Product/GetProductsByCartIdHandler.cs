@@ -11,19 +11,11 @@ namespace Amazon.Api.Handlers.Product
     public class GetProductsByCartIdHandler(
         ILogger _logger,
         AmazonContext _amazonContext,
-        IUserCartService _userCartService,
-        ICartService _cartService)
+        IUserCartService _userCartService)
         : HandlerBase<GetProductsByCartIdRequest, GetProductsByCartIdResponse>(_logger, _amazonContext)
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var cart = await _cartService.GetAll()
-                .Where(x => x.CartId == Request.CartId && x.IsActive == true)
-                .FirstOrDefaultAsync(); ;
-
-            if (cart is null)
-                return NotFound($"Cart with ID {Request.CartId} Not found");
-
             var products = await _userCartService.GetAll()
                 .Where(x => x.CartId == Request.CartId && x.IsActive == true)
                 .Include(x => x.Product.ProductDetail)
