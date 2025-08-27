@@ -11,7 +11,8 @@ namespace Amazon.Api.Business.Manager
         DeleteProductHandler _deleteProductHandler,
         GetProductsByCartIdHandler _getProductsByCartIdHandler,
         GetFilteredProductsHandler _getFilteredProductsHandler,
-        GetProductsByCategoriesHandler _getProductsByCategoriesHandler)
+        GetProductsByCategoriesHandler _getProductsByCategoriesHandler,
+        GetOrderedProductsByUserIdHandler _getOrderedProductsByUserIdHandler)
     {
         public async Task<GetProductListResponse> GetAllAsync()
         {
@@ -53,6 +54,11 @@ namespace Amazon.Api.Business.Manager
         public async Task<GetProductsByCategoriesResponse> GetProductsByCategories(GetProductsByCategoriesRequest getProductsByCategoriesRequest)
         {
             return await _getProductsByCategoriesHandler.HandleAsync(getProductsByCategoriesRequest);
+        }
+
+        public async Task<GetOrderedProductsByUserIdResponse> GetOrderedProductsByUserId(GetOrderedProductsByUserIdRequest getOrderedProductsByUserIdRequest)
+        {
+            return await _getOrderedProductsByUserIdHandler.HandleAsync(getOrderedProductsByUserIdRequest);
         }
     }
 }

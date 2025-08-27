@@ -52,7 +52,6 @@ public class Program {
             .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
             .AddEnvironmentVariables();
 
-
         RegisterContext(builder);
         RegisterValidator(builder);
         RegisterSerilog(builder);
@@ -191,6 +190,7 @@ public class Program {
         builder.Services.AddTransient<UpdateProductDetailHandler>();
         builder.Services.AddTransient<DeleteProductDetailHandler>();
         builder.Services.AddTransient<GetProductDetailsByProductIdHandler>();
+        builder.Services.AddTransient<GetOrderedProductsByUserIdHandler>();
 
         builder.Services.AddTransient<GetTagListHandler>();
         builder.Services.AddTransient<GetTagHandler>();
