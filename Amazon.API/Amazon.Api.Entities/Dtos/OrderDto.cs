@@ -4,6 +4,7 @@
     {
         public int OrderId { get; set; }
         public int UserId { get; set; }
+        public int Count { get; set; }
         public int ProductId { get; set; }
         public bool? IsActive { get; set; }
         public int CreatedBy { get; set; }

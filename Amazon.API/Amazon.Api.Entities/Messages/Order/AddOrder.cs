@@ -6,6 +6,7 @@ namespace Amazon.Api.Entities.Messages.Order
     {
         public int UserId { get; set; }
         public int ProductId { get; set; }
+        public int Count { get; set; }
     }
 
     public class AddOrderResponse : ResponseBase
