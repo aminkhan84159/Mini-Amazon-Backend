@@ -35,6 +35,7 @@ namespace Amazon.Api.Handlers.Order
             {
                 UserId = Request.UserId,
                 ProductId = Request.ProductId,
+                Count = Request.Count,
                 CreatedBy = 101,
                 CreatedOn = DateTime.UtcNow,
             };

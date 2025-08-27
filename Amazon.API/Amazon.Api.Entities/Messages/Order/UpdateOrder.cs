@@ -8,6 +8,7 @@ namespace Amazon.Api.Entities.Messages.Order
         public int OrderId { get; set; }
         public int UserId { get; set; }
         public int ProductId { get; set; }
+        public int Count { get; set; }
     }
 
     public class UpdateOrderResponse : ResponseBase

@@ -42,6 +42,7 @@ namespace Amazon.Api.Handlers.Order
 
             order.ProductId = Request.ProductId;
             order.UserId = Request.UserId;
+            order.Count = Request.Count;
             order.UpdatedBy = 101;
             order.UpdatedOn = DateTime.UtcNow;
 
@@ -52,6 +53,7 @@ namespace Amazon.Api.Handlers.Order
                 OrderId = order.OrderId,
                 ProductId = order.ProductId,
                 UserId = order.UserId,
+                Count = order.Count,
                 IsActive = order.IsActive,
                 CreatedBy = order.CreatedBy,
                 CreatedOn = order.CreatedOn,

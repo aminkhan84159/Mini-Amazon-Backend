@@ -36,6 +36,7 @@ namespace Amazon.Api.Handlers.Product
                 OrderId = x.OrderId,
                 UserId = x.UserId,
                 ProductId = x.ProductId,
+                Count = x.Count,
                 IsActive = x.IsActive,
                 CreatedBy = x.CreatedBy,
                 CreatedOn = x.CreatedOn,
