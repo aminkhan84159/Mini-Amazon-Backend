@@ -10,6 +10,6 @@ namespace Amazon.Api.Entities.Messages.Product
 
     public class GetProductsByCartIdResponse : ResponseBase
     {
-        public List<ProductDto> Products { get; set; }
+        public List<ProductDto> Products { get; set; } = null!;
     }
 }
