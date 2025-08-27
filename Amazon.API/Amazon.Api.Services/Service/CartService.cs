@@ -9,7 +9,6 @@ namespace Amazon.Api.Services.Service
 {
     public class CartService : GenericService<Cart, CartValidator>, ICartService
     {
-
         public CartService(
             AmazonContext amazonContext,
             CartValidator entityValidator)

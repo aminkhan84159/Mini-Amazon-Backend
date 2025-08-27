@@ -31,6 +31,13 @@ namespace Amazon.Api.Handlers.UserCart
             if (cart is null)
                 return NotFound($"Cart with ID {Request.CartId} not found");
 
+            var existingUserCart = await _userCartService.GetAll()
+                .Where(x => x.CartId == Request.CartId && x.ProductId == Request.ProductId && x.IsActive == true)
+                .FirstOrDefaultAsync();
+
+            if (existingUserCart is not null)
+                return Conflict($"Product with ID {Request.ProductId} already exists in Cart ID {Request.CartId}");
+
             var userCart = new Data.Entities.UserCart()
             {
                 ProductId = Request.ProductId,

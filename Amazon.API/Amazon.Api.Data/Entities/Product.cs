@@ -18,6 +18,7 @@ public partial class Product
     public int? UpdatedBy { get; set; }
     public DateTime? UpdatedOn { get; set; }
 
+    public virtual ICollection<ConfirmCart> ConfirmCarts { get; set; } = new List<ConfirmCart>();
     public virtual ICollection<Image> Images { get; set; } = new List<Image>();
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
     public virtual ProductDetail? ProductDetail { get; set; }

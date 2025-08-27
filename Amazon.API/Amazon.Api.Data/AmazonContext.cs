@@ -55,6 +55,25 @@ public partial class AmazonContext : DbContext
                 .HasConstraintName("Cart_UserId_fkey");
         });
 
+        modelBuilder.Entity<ConfirmCart>(entity =>
+        {
+            entity.HasKey(e => e.ConfirmCartId).HasName("ConfirmCart_pkey");
+
+            entity.ToTable("ConfirmCart");
+
+            entity.Property(e => e.CreatedBy).HasDefaultValue(1);
+            entity.Property(e => e.CreatedOn).HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.Property(e => e.IsActive).HasDefaultValue(true);
+
+            entity.HasOne(d => d.Cart).WithMany(p => p.ConfirmCarts)
+                .HasForeignKey(d => d.CartId)
+                .HasConstraintName("ConfirmCart_CartId_fkey");
+
+            entity.HasOne(d => d.Product).WithMany(p => p.ConfirmCarts)
+                .HasForeignKey(d => d.ProductId)
+                .HasConstraintName("ConfirmCart_ProductId_fkey");
+        });
+
         modelBuilder.Entity<Image>(entity =>
         {
             entity.HasKey(e => e.ImageId).HasName("Image_pkey");
