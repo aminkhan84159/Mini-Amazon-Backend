@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Amazon.Api.Handlers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00fdcdfa61e554b64fdcd61c843a95b3a4b8277d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb492438d5ace4ec47b93d32844d64186bce679f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Amazon.Api.Handlers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Amazon.Api.Handlers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

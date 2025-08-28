@@ -54,5 +54,16 @@ namespace Amazon.Api.Controllers
                 return Ok(getOrderedProductsByUserIdResponse);
             });
         }
+
+        [HttpPost("GetProductsFromConfirmCart")]
+        public async Task<IActionResult> GetProductsFromConfirmCart([FromBody] GetProductsFromConfirmCartRequest getProductsFromConfirmCartRequest)
+        {
+            return await GetResponseAsync(async () =>
+            {
+                var getProductsFromConfirmCartResponse = await productManager.GetProductsFromConfirmCart(getProductsFromConfirmCartRequest);
+
+                return Ok(getProductsFromConfirmCartResponse);
+            });
+        }
     }
 }
