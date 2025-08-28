@@ -195,6 +195,7 @@ public class Program {
         builder.Services.AddTransient<DeleteProductDetailHandler>();
         builder.Services.AddTransient<GetProductDetailsByProductIdHandler>();
         builder.Services.AddTransient<GetOrderedProductsByUserIdHandler>();
+        builder.Services.AddTransient<GetProductsFromConfirmCartHandler>();
 
         builder.Services.AddTransient<GetTagListHandler>();
         builder.Services.AddTransient<GetTagHandler>();

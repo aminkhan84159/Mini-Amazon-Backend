@@ -3,27 +3,29 @@ using Amazon.Api.Data;
 using Amazon.Api.Entities.Dtos;
 using Amazon.Api.Entities.Messages.Product;
 using Amazon.Api.Services.Interfaces;
+using Amazon.Api.Services.Service;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Amazon.Api.Handlers.Product
 {
-    public class GetProductsByCartIdHandler(
+    public class GetProductsFromConfirmCartHandler(
         ILogger _logger,
         AmazonContext _amazonContext,
-        IUserCartService _userCartService)
-        : HandlerBase<GetProductsByCartIdRequest, GetProductsByCartIdResponse>(_logger, _amazonContext)
+        IConfirmCartService _confirmCartService,
+        ICartService _cartService)
+        : HandlerBase<GetProductsFromConfirmCartRequest, GetProductsFromConfirmCartResponse>(_logger, _amazonContext)
     {
         protected override async Task<bool> HandleCoreAsync()
         {
-            var cart = await _userCartService.GetAll()
+            var cart = await _cartService.GetAll()
                 .Where(x => x.CartId == Request.CartId && x.IsActive == true)
                 .FirstOrDefaultAsync();
 
             if (cart is null)
                 return NotFound($"Cart with ID {Request.CartId} not found");
 
-            var products = await _userCartService.GetAll()
+            var products = await _confirmCartService.GetAll()
                 .Where(x => x.CartId == Request.CartId && x.IsActive == true)
                 .Include(x => x.Product.ProductDetail)
                 .Include(x => x.Product.Images.Where(i => i.IsActive == true))

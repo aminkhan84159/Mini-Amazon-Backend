@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Amazon.API",
+    "\\Amazon.API\\Amazon.Api",
+    "\\Amazon.API\\Amazon.Api.Business",
+    "\\Amazon.API\\Amazon.Api.Business\\Manager"
   ],
+  "SelectedNode": "\\Amazon.API\\Amazon.Api.Business\\Manager\\ConfirmCartManager.cs",
   "PreviewInSolutionExplorer": false
 }
