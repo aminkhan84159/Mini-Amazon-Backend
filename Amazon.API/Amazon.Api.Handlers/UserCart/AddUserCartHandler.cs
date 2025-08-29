@@ -43,7 +43,8 @@ namespace Amazon.Api.Handlers.UserCart
                 ProductId = Request.ProductId,
                 CartId = Request.CartId,
                 CreatedBy = 101,
-                CreatedOn = DateTime.UtcNow
+                CreatedOn = DateTime.UtcNow,
+                IsActive = true
             };
 
             await _userCartService.AddAsync(userCart);

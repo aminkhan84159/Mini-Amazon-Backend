@@ -42,6 +42,7 @@ namespace Amazon.Api.Handlers.ProductTag
             {
                 ProductId = Request.ProductId,
                 TagId = Request.TagId,
+                IsActive = true
             };
 
             await _productTagService.AddAsync(productTag);

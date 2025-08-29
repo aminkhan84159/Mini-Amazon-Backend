@@ -15,7 +15,7 @@ public partial class ProductDetail
     public string Warranty { get; set; } = null!;
     public string? Shipping { get; set; }
     public string ReturnPolicy { get; set; } = null!;
-    public bool? IsActive { get; set; }
+    public bool IsActive { get; set; }
     public int CreatedBy { get; set; }
     public DateTime CreatedOn { get; set; }
     public int? UpdatedBy { get; set; }

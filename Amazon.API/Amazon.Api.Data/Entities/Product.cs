@@ -12,7 +12,7 @@ public partial class Product
     public string Category { get; set; } = null!;
     public decimal Price { get; set; }
     public decimal? Rating { get; set; }
-    public bool? IsActive { get; set; }
+    public bool IsActive { get; set; }
     public int CreatedBy { get; set; }
     public DateTime CreatedOn { get; set; }
     public int? UpdatedBy { get; set; }

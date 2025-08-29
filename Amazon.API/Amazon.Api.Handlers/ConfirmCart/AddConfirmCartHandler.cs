@@ -44,7 +44,8 @@ namespace Amazon.Api.Handlers.ConfirmCart
                 ProductId = Request.ProductId,
                 CartId = Request.CartId,
                 CreatedBy = 101,
-                CreatedOn = DateTime.UtcNow
+                CreatedOn = DateTime.UtcNow,
+                IsActive = true
             };
 
             await _confirmCartService.AddAsync(confirmCart);

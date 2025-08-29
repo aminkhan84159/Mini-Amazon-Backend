@@ -11,7 +11,7 @@ public partial class Image
     public byte[]? Images { get; set; }
     public string? ImageName { get; set; }
     public string? ImageType { get; set; }
-    public bool? IsActive { get; set; }
+    public bool IsActive { get; set; }
     public int CreatedBy { get; set; }
     public DateTime CreatedOn { get; set; }
     public int? UpdatedBy { get; set; }

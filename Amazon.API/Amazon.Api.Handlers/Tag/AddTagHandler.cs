@@ -30,6 +30,7 @@ namespace Amazon.Api.Handlers.Tag
                 Tags = Request.Tags,
                 CreatedBy = 101,
                 CreatedOn = DateTime.UtcNow,
+                IsActive = true
             };
 
             await _tagDataService.AddAsync(tag);

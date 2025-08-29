@@ -13,7 +13,7 @@ public partial class User
     public string Email { get; set; } = null!;
     public string? PhoneNo { get; set; }
     public string Role { get; set; } = null!;
-    public bool? IsActive { get; set; }
+    public bool IsActive { get; set; }
     public int CreatedBy { get; set; }
     public DateTime CreatedOn { get; set; }
     public int? UpdatedBy { get; set; }

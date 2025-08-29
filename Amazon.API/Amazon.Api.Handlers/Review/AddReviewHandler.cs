@@ -31,7 +31,8 @@ namespace Amazon.Api.Handlers.Review
                 Comment = Request.Comment,
                 Rating = Request.Rating,
                 CreatedBy = 101,
-                CreatedOn = DateTime.UtcNow
+                CreatedOn = DateTime.UtcNow,
+                IsActive = true
             };
 
             await _reviewService.AddAsync(review);
