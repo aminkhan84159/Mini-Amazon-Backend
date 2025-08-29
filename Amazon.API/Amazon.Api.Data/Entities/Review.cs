@@ -11,7 +11,7 @@ public partial class Review
     public string ReviewerEmail { get; set; } = null!;
     public string? Comment { get; set; }
     public decimal Rating { get; set; }
-    public bool? IsActive { get; set; }
+    public bool IsActive { get; set; }
     public int CreatedBy { get; set; }
     public DateTime CreatedOn { get; set; }
     public int? UpdatedBy { get; set; }

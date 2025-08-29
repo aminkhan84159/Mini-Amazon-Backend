@@ -35,7 +35,8 @@ namespace Amazon.Api.Handlers.ProductDetail
                 Warranty = Request.Warranty,
                 ReturnPolicy = Request.ReturnPolicy,
                 CreatedBy = 101,
-                CreatedOn = DateTime.UtcNow
+                CreatedOn = DateTime.UtcNow,
+                IsActive = true
             };
 
             await _productDetailService.AddAsync(productDeatil);

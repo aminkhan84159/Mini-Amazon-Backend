@@ -38,6 +38,7 @@ namespace Amazon.Api.Handlers.Order
                 Count = Request.Count,
                 CreatedBy = 101,
                 CreatedOn = DateTime.UtcNow,
+                IsActive = true
             };
 
             await _orderService.AddAsync(order);

@@ -54,7 +54,8 @@ namespace Amazon.Api.Handlers.Image
                             ImageName = image.FileName,
                             ImageType = image.ContentType,
                             CreatedBy = 101,
-                            CreatedOn = DateTime.UtcNow
+                            CreatedOn = DateTime.UtcNow,
+                            IsActive = true
                         };
 
                         await _imageService.AddAsync(Image);

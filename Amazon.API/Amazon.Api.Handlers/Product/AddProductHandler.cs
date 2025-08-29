@@ -36,7 +36,8 @@ namespace Amazon.Api.Handlers.Product
                 Price = Request.Price,
                 Rating = Request.Rating,
                 CreatedBy = 101,
-                CreatedOn = DateTime.UtcNow
+                CreatedOn = DateTime.UtcNow,
+                IsActive = true
             };
 
             await _productService.AddAsync(product);

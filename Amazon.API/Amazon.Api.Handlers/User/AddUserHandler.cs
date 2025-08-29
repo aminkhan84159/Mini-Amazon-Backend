@@ -48,7 +48,8 @@ namespace Amazon.Api.Handlers.User
                 Password = Request.Password,
                 PhoneNo = Request.PhoneNo,
                 Role = Request.Role,
-                CreatedOn = DateTime.UtcNow
+                CreatedOn = DateTime.UtcNow,
+                IsActive = true
             };
 
             await _userDataService.AddAsync(user);
@@ -57,7 +58,8 @@ namespace Amazon.Api.Handlers.User
             {
                 UserId = user.UserId,
                 CreatedBy = user.UserId,
-                CreatedOn = DateTime.UtcNow
+                CreatedOn = DateTime.UtcNow,
+                IsActive = true
             };
 
             await _cartService.AddAsync(cart);
