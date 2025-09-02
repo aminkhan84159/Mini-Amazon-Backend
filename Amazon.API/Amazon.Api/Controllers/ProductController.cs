@@ -65,5 +65,16 @@ namespace Amazon.Api.Controllers
                 return Ok(getProductsFromConfirmCartResponse);
             });
         }
+
+        [HttpPost("GetProductsByVendor")]
+        public async Task<IActionResult> GetProductsByVendor([FromBody] GetProductsByVendorRequest getProductsByVendorRequest)
+        {
+            return await GetResponseAsync(async () =>
+            {
+                var getProductsByVendorResponse = await productManager.GetProductsByVendor(getProductsByVendorRequest);
+
+                return Ok(getProductsByVendorResponse);
+            });
+        }
     }
 }
