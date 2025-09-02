@@ -13,7 +13,8 @@ namespace Amazon.Api.Business.Manager
         GetFilteredProductsHandler _getFilteredProductsHandler,
         GetProductsByCategoriesHandler _getProductsByCategoriesHandler,
         GetOrderedProductsByUserIdHandler _getOrderedProductsByUserIdHandler,
-        GetProductsFromConfirmCartHandler _getProductsFromConfirmCartHandler)
+        GetProductsFromConfirmCartHandler _getProductsFromConfirmCartHandler,
+        GetProductsByVendorHandler _getProductsByVendorHandler)
     {
         public async Task<GetProductListResponse> GetAllAsync()
         {
@@ -65,6 +66,11 @@ namespace Amazon.Api.Business.Manager
         public async Task<GetProductsFromConfirmCartResponse> GetProductsFromConfirmCart(GetProductsFromConfirmCartRequest getProductsFromConfirmCartRequest)
         {
             return await _getProductsFromConfirmCartHandler.HandleAsync(getProductsFromConfirmCartRequest);
+        }
+
+        public async Task<GetProductsByVendorResponse> GetProductsByVendor(GetProductsByVendorRequest getProductsByVendorRequest)
+        {
+            return await _getProductsByVendorHandler.HandleAsync(getProductsByVendorRequest);
         }
     }
 }
