@@ -1,6 +1,7 @@
 ﻿using Amazon.Api.Core.ServiceFramework.Handlers;
 using Amazon.Api.Data;
 using Amazon.Api.Data.Entities;
+using Amazon.Api.Entities.Communication;
 using Amazon.Api.Entities.Messages.User;
 using Amazon.Api.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,7 @@ namespace Amazon.Api.Handlers.User
         AmazonContext _amazonContext,
         IUserDataService _userDataService,
         ICartService _cartService,
+        ICommunicationService _communicationService,
         IConfiguration _configuration)
         : HandlerBase<AddUserRequest, AddUserResponse>(_logger, _amazonContext)
     {
@@ -52,7 +54,7 @@ namespace Amazon.Api.Handlers.User
                 IsActive = true
             };
 
-            await _userDataService.AddAsync(user);
+            //await _userDataService.AddAsync(user);
 
             var cart = new Data.Entities.Cart()
             {
@@ -62,7 +64,7 @@ namespace Amazon.Api.Handlers.User
                 IsActive = true
             };
 
-            await _cartService.AddAsync(cart);
+            //await _cartService.AddAsync(cart);
 
             var claims = new[]
                     {
@@ -83,6 +85,10 @@ namespace Amazon.Api.Handlers.User
                 signingCredentials: signIn
                 );
             string tokenValue = new JwtSecurityTokenHandler().WriteToken(token);
+
+            var welcomeEmailDto = WelcomeEmailDto.MapToEmail(Request.FirstName, Request.LastName, Request.Email, Request.Role);
+
+            await _communicationService.SendEmailAsync(welcomeEmailDto.RecipientEmail, welcomeEmailDto.Subject, welcomeEmailDto.Body);
 
             Response.token = tokenValue.ToString();
             return Success();

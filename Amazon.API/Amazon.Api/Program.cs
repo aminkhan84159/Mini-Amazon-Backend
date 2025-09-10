@@ -121,6 +121,7 @@ public class Program {
         builder.Services.AddTransient<IImageTypeService, ImageTypeService>();
         builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
         builder.Services.AddTransient<IConfirmCartService, ConfirmCartService>();
+        builder.Services.AddTransient<ICommunicationService, CommunicationService>();
     }
 
     private static void RegisterManager(WebApplicationBuilder builder)
