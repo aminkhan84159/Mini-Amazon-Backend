@@ -54,7 +54,7 @@ namespace Amazon.Api.Handlers.User
                 IsActive = true
             };
 
-            //await _userDataService.AddAsync(user);
+            await _userDataService.AddAsync(user);
 
             var cart = new Data.Entities.Cart()
             {
@@ -64,7 +64,7 @@ namespace Amazon.Api.Handlers.User
                 IsActive = true
             };
 
-            //await _cartService.AddAsync(cart);
+            await _cartService.AddAsync(cart);
 
             var claims = new[]
                     {
