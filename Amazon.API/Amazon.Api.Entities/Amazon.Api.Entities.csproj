@@ -7,6 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Communication\Welcome_Banner.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Communication\Welcome_Banner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Amazon.Api.Core\Amazon.Api.Core.csproj" />
   </ItemGroup>
 

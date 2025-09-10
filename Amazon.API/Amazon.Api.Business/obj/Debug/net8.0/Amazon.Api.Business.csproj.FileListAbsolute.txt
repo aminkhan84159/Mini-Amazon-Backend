@@ -22,3 +22,4 @@ C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amaz
 C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Business\obj\Debug\net8.0\refint\Amazon.Api.Business.dll
 C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Business\obj\Debug\net8.0\Amazon.Api.Business.pdb
 C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Business\obj\Debug\net8.0\ref\Amazon.Api.Business.dll
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Business\bin\Debug\net8.0\Communication\Welcome_Banner.png

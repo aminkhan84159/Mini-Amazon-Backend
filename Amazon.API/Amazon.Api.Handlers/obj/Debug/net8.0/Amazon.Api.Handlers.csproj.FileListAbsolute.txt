@@ -20,3 +20,4 @@ C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amaz
 C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Handlers\obj\Debug\net8.0\refint\Amazon.Api.Handlers.dll
 C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Handlers\obj\Debug\net8.0\Amazon.Api.Handlers.pdb
 C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Handlers\obj\Debug\net8.0\ref\Amazon.Api.Handlers.dll
+C:\Users\AminKhan\source\repos\aminkhan84159\Mini-Amazon-Backend\Amazon.API\Amazon.Api.Handlers\bin\Debug\net8.0\Communication\Welcome_Banner.png
