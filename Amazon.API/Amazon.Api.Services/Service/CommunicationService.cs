@@ -2,12 +2,17 @@
 using Microsoft.Extensions.Configuration;
 using System.Net;
 using System.Net.Mail;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 
 namespace Amazon.Api.Services.Service
 {
     public class CommunicationService : ICommunicationService
     {
         private readonly IConfiguration _configuration;
+        public string AccountSID = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID")!;
+        public string AuthToken = Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN")!;
 
         public CommunicationService(IConfiguration configuration)
         {
@@ -37,6 +42,19 @@ namespace Amazon.Api.Services.Service
             mailMessage.To.Add(new MailAddress(recipient));
 
             await smtpClient.SendMailAsync(mailMessage);
+        }
+
+        public string SendSMS(string phoneNumber, string messageBody)
+        {
+            TwilioClient.Init(AccountSID, AuthToken);
+
+            var message = MessageResource.Create(
+            to: new PhoneNumber(phoneNumber), // Recipient's phone number
+            from: new PhoneNumber("+14406717965"), // Your Twilio phone number
+            body: messageBody
+            );
+
+            return message.ToString()!;
         }
     }
 }

@@ -89,6 +89,7 @@ namespace Amazon.Api.Handlers.User
             var welcomeEmailDto = WelcomeEmailDto.MapToEmail(Request.FirstName, Request.LastName, Request.Email, Request.Role);
 
             await _communicationService.SendEmailAsync(welcomeEmailDto.RecipientEmail, welcomeEmailDto.Subject, welcomeEmailDto.Body);
+            //_communicationService.SendSMS(Request.PhoneNo!, "Glad to have you onboard");
 
             Response.token = tokenValue.ToString();
             return Success();
