@@ -423,12 +423,11 @@
               "Title": "WelcomeDto.cs",
               "DocumentMoniker": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Entities\\Communication\\WelcomeDto.cs",
               "RelativeDocumentMoniker": "..\\Amazon.Api.Entities\\Communication\\WelcomeDto.cs",
-              "ToolTip": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Entities\\Communication\\WelcomeDto.cs*",
-              "RelativeToolTip": "..\\Amazon.Api.Entities\\Communication\\WelcomeDto.cs*",
+              "ToolTip": "C:\\Users\\AminKhan\\source\\repos\\aminkhan84159\\Mini-Amazon-Backend\\Amazon.API\\Amazon.Api.Entities\\Communication\\WelcomeDto.cs",
+              "RelativeToolTip": "..\\Amazon.Api.Entities\\Communication\\WelcomeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T06:45:18.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T06:45:18.816Z"
             },
             {
               "$type": "Document",
@@ -440,8 +439,7 @@
               "RelativeToolTip": "..\\Amazon.Api.Services\\Service\\CommunicationService.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAqwBsAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T06:37:25.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T06:37:25.409Z"
             },
             {
               "$type": "Document",
@@ -489,8 +487,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-05T09:43:46.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T09:43:46.646Z"
             },
             {
               "$type": "Document",
@@ -515,8 +512,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAcwHsAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T09:43:53.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T09:43:53.646Z"
             },
             {
               "$type": "Document",

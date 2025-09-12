@@ -81,7 +81,7 @@ namespace Amazon.Api.Handlers.User
                 _configuration["Jwt:Issuer"],
                 _configuration["Jwt:Audience"],
                 claims,
-                expires: DateTime.UtcNow.AddMinutes(30),
+                expires: DateTime.UtcNow.AddDays(30),
                 signingCredentials: signIn
                 );
             string tokenValue = new JwtSecurityTokenHandler().WriteToken(token);
