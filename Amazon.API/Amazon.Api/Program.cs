@@ -59,6 +59,7 @@ public class Program {
         RegisterDataService(builder);
         RegisterHandler(builder);
         RegisterManager(builder);
+        builder.Services.AddHttpClient();
 
         builder.Configuration["Jwt:Key"] = Environment.GetEnvironmentVariable("Key");
         builder.Services.AddAuthentication(options =>

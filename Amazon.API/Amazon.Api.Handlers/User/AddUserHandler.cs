@@ -1,6 +1,5 @@
 ﻿using Amazon.Api.Core.ServiceFramework.Handlers;
 using Amazon.Api.Data;
-using Amazon.Api.Data.Entities;
 using Amazon.Api.Entities.Communication;
 using Amazon.Api.Entities.Messages.User;
 using Amazon.Api.Services.Interfaces;
@@ -9,7 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using System.IdentityModel.Tokens.Jwt;
-using System.Runtime.CompilerServices;
 using System.Security.Claims;
 using System.Text;
 
@@ -86,10 +84,10 @@ namespace Amazon.Api.Handlers.User
                 );
             string tokenValue = new JwtSecurityTokenHandler().WriteToken(token);
 
-            var welcomeEmailDto = WelcomeEmailDto.MapToEmail(Request.FirstName, Request.LastName, Request.Email, Request.Role);
+            var welcomeEmailDto = WelcomeEmailDto.MapToEmail(user.FirstName, user.LastName, user.Email, user.Role);
 
             await _communicationService.SendEmailAsync(welcomeEmailDto.RecipientEmail, welcomeEmailDto.Subject, welcomeEmailDto.Body);
-            //_communicationService.SendSMS(Request.PhoneNo!, "Glad to have you onboard");
+            //_communicationService.SendSMS(user.PhoneNo!, "Glad to have you onboard");
 
             Response.token = tokenValue.ToString();
             return Success();
