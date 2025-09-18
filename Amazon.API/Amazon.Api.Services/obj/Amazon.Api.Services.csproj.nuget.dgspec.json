@@ -251,6 +251,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.29.3, )"
+            },
             "Twilio": {
               "target": "Package",
               "version": "[7.13.0, )"
